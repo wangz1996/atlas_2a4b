@@ -1,0 +1,1185 @@
+xAOD::Init                INFO    Environment initialised for data access
+Package.TopAnalysis      INFO    INPUT: Configuration file (argv[1]) = ./cuts.txt
+
+Package.TopAnalysis      INFO    LOCATED (using PathResolverFindFile ): Configuration file = /lustre/collider/wangzhen/atlas/2a4b/Analysis_Framework/run/./cuts.txt
+
+Package.TopAnalysis      INFO    Configuration Files:
+/lustre/collider/wangzhen/atlas/2a4b/Analysis_Framework/run/./cuts.txt
+./input-mc23-rel22.txt
+
+Package.TopAnalysis      INFO    Configuration:
+"AdvancedUsage_LargeRJetUncertaintiesConfigDir" : "rel21/Winter2021"                  - Path to directory containing large-R jet uncertainties config Default: "rel21/Winter2021".
+"AdvancedUsage_METUncertaintiesConfigDir" : "Latest"                            - Path to directory containing MET uncertainties configs (including trailing /) 'Latest' (default), or previous 'METUtilities/data17_13TeV/prerec_Jan16/' Default: "Latest".
+"AllowJMSforAFII"                        : "False"                             - Enable use of UNSUPPORTED small-R jet JMS calibration use on AFII samples. Default: "False". Allowed values: True, False
+"ApplyElectronInJetSubtraction"          : "False"                             - Subtract electrons close to jets for boosted analysis : True or False(top default) Default: "False".
+"ApplyTauMVATES"                         : "True"                              - Apply new Tau energy calibration based on substructure information and regression. Must be True. Deprecated. Default: "True".
+"ApplyTightSFsInLooseTree"               : "False"                             - Special: in Loose trees, calculate electron/muon SFs with tight leptons only, and considering they are tight: True or False (default) Default: "False".
+"BTagCDIPath"                            : "Default"                           - Path to the b-tagging CDI file. Default: Using the hardcoded path. Default: "Default".
+"BTagVariableSaveList"                   : "MV2c20_discriminant"               - The list of b-tag variables to save (EventSaverxAODNext only). Default: "MV2c20_discriminant".
+"BTaggingCalibrationB"                   : "default"                           - The calibration to use for the b-tagging SFs (B-jets). Default 'default' Default: "default".
+"BTaggingCalibrationC"                   : "default"                           - The calibration to use for the b-tagging SFs (C- and T-jets). Default 'default' Default: "default".
+"BTaggingCalibrationLight"               : "default"                           - The calibration to use for the b-tagging SFs (Light-jets). Default 'default' Default: "default".
+"BTaggingCaloJetUncalibWP"               : " "                                 - List of uncalibrated b-tagging WPs for calo jets. See BTaggingCaloJetWP option description Default: " ".
+"BTaggingCaloJetWP"                      : "DL1dv01:FixedCutBEff_77"           - b-tagging WPs to use for calo jet collection in the analysis, separated by commas. The format should follow the convention of the b-tagging CP group, e.g. FixedCutBEff_60, FlatBEff_77, Continuous, etc. The specified WPs must be calibrated, otherwise use the BTaggingCaloJetWPUncalib option. Default: " ".
+"BTaggingSystExcludedFromEV"             : "none"                              - User-defined list of b-tagging systematics to be dextracted from eigenvector decomposition, separated by semi-colons (none by default) Default: "none".
+"BTaggingTrackJetUncalibWP"              : " "                                 - List of uncalibrated b-tagging WPs for track jets. See BTaggingTrackJetWP option description Default: " ".
+"BTaggingTrackJetWP"                     : " "                                 - b-tagging WPs to use for VR track jet collection in the analysis, separated by commas. The format should follow the convention of the b-tagging CP group, e.g. FixedCutBEff_60, FlatBEff_77, Continuous, etc. The specified WPs must be calibrated, otherwise use the BTaggingTrackJetWPUncalib option. Default: " ".
+"BadBatmanCleaningRange"                 : "276262:311481"                     - Set a range of RunNumbers where the cleaning is applied in the form of XXXXX:YYYYY Default: "276262:311481".
+"BoostedJetTagging"                      : " "                                 - Boosted jet taggers to use in the analysis, separated by commas or white spaces. By default, no tagger is used. Default: " ".
+"DemandPrimaryVertex"                    : "True"                              - Wether at least one primary vertex in event is required. Default True. For debugging purposes only! Default: "True".
+"DoLargeRPseudodataJER"                  : "True"                              - If set to True, produce additional JER smearing systematics treating MC as pseudo-data, provided FullJER or AllJER is specified with LargeRJetUncertainties_JESJERJMS_NPModel. Default: "True". Allowed values: True, False
+"DoLoose"                                : "Data"                              - Run Loose selection and dumps the Loose trees : Data (default), MC, Both, False Default: "Data".
+"DoParticleLevelOverlapRemoval"          : "True"                              - Perform overlap removal at particle level? True (default), False, or any combination (comma separated) of MuonJet, ElectronJet, JetPhoton Default: "True".
+"DoSysts"                                : "Both"                              - Run systematics on given selection: Both (default), Tight, Loose Default: "Both".
+"DoTight"                                : "Both"                              - Dumps the normal non-"*_Loose" trees : Data, MC, Both (default), False Default: "Both".
+"DumpBtagSystsInSystTrees"               : "False"                             - Dump systematics-shifted b-tagging SFs in systematic TTrees, True or False (default: False) Default: "False".
+"DynamicKeys"                            : ""                                  - Additional dynamic key list seperated by , Default: "".
+"EGammaCalibrationModel"                 : "es2022_R22_PRE"                    - To override default EGammaCalibration model, Default 'es2022_R22_PRE' Default: "es2022_R22_PRE".
+"EgammaSystematicModel"                  : "1NP_v1"                            - Egamma Calibration Systematic model : FULL_v1 , 1NP_v1 (default) Default: "1NP_v1".
+"EleEleOverlapRemoval"                   : "False"                             - Apply electron-electron overlap removal. True or False (default: False). Default: "False".
+"ElectronCollectionName"                 : "Electrons"                         - Name of the Electron container Default: "".
+"ElectronEfficiencySystematicModel"      : "TOTAL"                             - Electron Efficiency Systematic model : FULL, SIMPLIFIED, TOTAL (default), COMBMCTOYS Default: "TOTAL".
+"ElectronEfficiencySystematicModelEtBinning" : "default"                           - Electron Efficiency Systematic model E_T binning (option for SIMPLIFIED model, do not specify to use default; format XXX:YYY:ZZZ. e.g. 4000:7000:10000:15000:13000000) Default: "default".
+"ElectronEfficiencySystematicModelEtaBinning" : "default"                           - Electron Efficiency Systematic model eta binning (option for SIMPLIFIED model, do not specify to use default; format XXX:YYY:ZZZ, e.g. 0.0:1.37:4.9) Default: "default".
+"ElectronEfficiencySystematicModelNToys" : "40"                                - Electron Efficiency Toy Systematics Number of Toys:  Default: "40".
+"ElectronEfficiencySystematicModelToySeed" : "12345"                             - Electron Efficiency Toy Systematics Seed of Toys:  Default: "12345".
+"ElectronID"                             : "TightLH"                           - Type of electron. Likelihood LooseAndBLayerLH, MediumLH, TightLH Default: "TightLH".
+"ElectronIDLoose"                        : "TightLH"                           - Type of electron for background. Likelihood LooseAndBLayerLH, MediumLH, TightLH Default: "MediumLH".
+"ElectronIDSFFilePath"                   : "Default"                           - EXPERIMENTAL! Path to a root file containing custom electron ID SFs, e.g. dev/ElectronEfficiencyCorrection/2015_2018/rel21.2/Precision_Summer2020_v1/offline/efficiencySF.offline.TightLLH_d0z0_v13.root.This should only be used by experts for testing SFs! Default: Using the most recent recommended map. Default: "Default".
+"ElectronIDSFFilePathLoose"              : "Default"                           - EXPERIMENTAL! Path to a root file containing custom electron ID SFs, e.g. dev/ElectronEfficiencyCorrection/2015_2018/rel21.2/Precision_Summer2020_v1/offline/efficiencySF.offline.TightLLH_d0z0_v13.root.This should only be used by experts for testing SFs! Default: Using the most recent recommended map. Default: "Default".
+"ElectronIsolation"                      : "Tight_VarRad"                      - Which isolation working point for electron selection Default: "FCTight".
+"ElectronIsolationLoose"                 : "Tight_VarRad"                      - Which isolation working point for electron selection Default: "None".
+"ElectronIsolationSF"                    : " "                                 - Force electron isolation SF to specific WP (e.g. None). Default: " ".
+"ElectronIsolationSFLoose"               : " "                                 - Force electron isolation SF to specific WP (e.g. None). Default: " ".
+"ElectronIsolationWPs"                   : "HighPtCaloOnly TightTrackOnly_VarRad TightTrackOnly_FixedRad Tight_VarRad Loose_VarRad" - Space-separated list of electron isolation WPs for which to store decisions as auxdecor<char> AnalysisTop_Isol_nameOfWorkingPoint. Default: " ".
+"ElectronPt"                             : "25000"                             - Electron pT cut for object selection (in MeV). Default 25 GeV. Default: "25000.".
+"ElectronTriggerEfficiencyConfig"        : "2022_e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHI" - Electron trigger efficiency SF configuration. REQUIRED! Default: " ".
+"ElectronTriggers"                       : "None"                              - Deprecated, use GlobalTriggers instead. Default: "None".
+"ElectronTriggersLoose"                  : "None"                              - Deprecated, use GlobalTriggersLoose instead. Default: "None".
+"ElectronVariableSaveList"               : "pt.eta.phi.m.charge.ptvarcone20.topoetcone20.passPreORSelection" - The list of electron variables to save (EventSaverxAODNext only). Default: "pt.eta.phi.m.charge.ptvarcone20.topoetcone20.passPreORSelection".
+"ElectronVetoLArCrack"                   : "True"                              - True/False. Set to False to disable LAr crack veto (not recommended). Default: "True".
+"Electrond0Sig"                          : "5."                                - Electron d0 significance cut for object selection. Default 5 Default: "5.".
+"Electrondeltaz0"                        : "0.5"                               - Electron delta z0 cut for object selection. Default 0.5 mm Default: "0.5".
+"EnablePromptLeptonImprovedVetoStudies"  : "False"                             - True/False. Adds the (many!) variables necessary to validate the PromptLeptonImprovedVeto electron+muon isolation -- TEMPORARY, for studies only (Default False). Default: "False".
+"EventVariableSaveList"                  : "runNumber.eventNumber.eventTypeBitmask.averageInteractionsPerCrossing" - The list of event variables to save (EventSaverxAODNext only). Default: "runNumber.eventNumber.eventTypeBitmask.averageInteractionsPerCrossing".
+"FakesMMConfigIFF"                       : "$ROOTCOREBIN/data/TopFakes/efficiencies.xml:1T:1F[T]" - Configurations for fake leptons estimate using FakeBkgTools from IFF: - default is $ROOTCOREBIN/data/TopFakes/efficiencies.xml:1T:1F[T]. Use as 
+ <ROOT/XML FILE>:<DEFNINITION>:<PROCESS>;<ROOT/XML FILE 2>:<DEFNINITION 2>:<PROCESS 2>; ... Default: "$ROOTCOREBIN/data/TopFakes/efficiencies.xml:1T:1F[T]".
+"FakesMMIFFDebug"                        : "False"                             - Enables debug mode for matrix-method weight calculation using FakeBkgTools from IFF: True, False (default) Default: "False".
+"FakesMMWeightsIFF"                      : "False"                             - Calculate matrix-method weights for fake leptons estimate using FakeBkgTools from IFF: True (calculate weights), False (does nothing) Default: "False".
+"FilterBranches"                         : " "                                 - Comma separated list of names of the branches that will be removed from the output Default: " ".
+"FilterNominalBranches"                  : " "                                 - Comma separated list of names of the nominal tree branches that will be removed from the output. If not provided, the branches from FilterBraches will be used Default: " ".
+"FilterNominalLooseBranches"             : " "                                 - Comma separated list of names of the nominal_Loose tree branches that will be removed from the output Default: " ".
+"FilterParticleLevelBranches"            : " "                                 - Comma separated list of names of the particle-level branches that will be removed from the output Default: " ".
+"FilterPartonLevelBranches"              : " "                                 - Comma separated list of names of the parton-level branches that will be removed from the output Default: " ".
+"FilterTrees"                            : " "                                 - Comma separated list of names of the trees that will be removed from the output Default: " ".
+"FirstEvent"                             : "0"                                 - The number of events that you want to skip (for testing). If 0 then no events are skipped. Default: "0".
+"ForceNominalWeightFallbackIndex"        : "False"                             - Force usage of NominalWeightFallbackIndex, even if MC sample metadata is correct. (Default: False) Default: "False".
+"ForceRandomRunNumber"                   : " "                                 - If set to an integer, will disable PRW and use that value as the random run number for MC Default: " ".
+"ForwardJVTWP"                           : "None"                              - Set fJVT Working Point for selecting forward jets (|eta|>2.5 & 20GeV<pT<60GeV)'None': No fJVT (doesn't run tool for selection) - use this if you don't have forward jets in your selection or if using using PFlow jets with a derivation older than p4173, 'Tight' (fJVT<0.4, recommended), 'Medium': (fJVT<0.5, if combined with ForwardJVTinMETCalculation this will set MET WP to Tenacious with stricter JVTinMET requirements Default: "None".
+"ForwardJVTinMETCalculation"             : "False"                             - Use fJVT cut on forward jets to improve resolution in the MET recalculation? 'False' (default - must set false if using pflow jets with derivations older than P4173), or 'True' Default: "False".
+"FwdElectronBCIDCleaningRunRange"        : "266904:311481"                     - Specify run range for which the BCID cleaning must be applied for fwd el. in data: "XXX:YYY"; the cleaning will be applied for XXX<=runNumber<=YYY Default: "266904:311481".
+"FwdElectronCollectionName"              : "None"                              - Name of the Forward Electrons container, ForwardElectrons or None (default) Default: "None".
+"FwdElectronID"                          : "Tight"                             - Type of fwd electron. Loose, Medium, Tight (default) Default: "Tight".
+"FwdElectronIDLoose"                     : "Tight"                             - Type of fwd loose electrons. Loose, Medium, Tight (default) Default: "Tight".
+"FwdElectronMaxEta"                      : "4.9"                               - Fwd Electron upper |eta| cut for object selection. Default 4.9 Default: "4.9".
+"FwdElectronMinEta"                      : "2.5"                               - Fwd Electron lower |eta| cut for object selection. Default 2.5 Default: "2.5".
+"FwdElectronPt"                          : "25000."                            - Fwd Electron pT cut for object selection (in MeV). Default 25 GeV. Default: "25000.".
+"GRLDir"                                 : "GoodRunsLists"                     - Location of GRL File Default: "TopAnalysis".
+"GRLFile"                                : "data22_13p6TeV/20220902/data22_13p6TeV.periodF_DetStatus-v108-pro28_MERGED_PHYS_StandardGRL_All_Good_25ns.xml" - Name of GRL File Default: " ".
+"GhostTracksQuality"                     : "TightPrimary"                      - WP of the ghost track quality. Option: TightPrimary, LoosePrimary. Loose, NoCut. Default TightPrimary. Default: "TightPrimary".
+"GhostTracksVertexAssociation"           : "nominal"                           - WP of the ghost track vertex association. Option: none, nominal and tight. Default nominal. Default: "nominal".
+"GhostTrackspT"                          : "500."                              - PT of the ghost tracks associated small-R jets (in MeV). Default 500 MeV. Default: "500.".
+"GlobalTriggers"                         : "2022@e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHI,mu26_ivarmedium_L1MU14FCH_OR_mu50_L1MU14FCH" - Trigger list for GlobalLeptonTriggerSF - Format as 2015@trig1,trig2 2016@trig3,trig4 : Separate periods defined with @ using whitespace, triggers with comma (default: None) Default: "None".
+"GlobalTriggersLoose"                    : "2022@e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHI,mu26_ivarmedium_L1MU14FCH_OR_mu50_L1MU14FCH" - Trigger list for GlobalLeptonTriggerSF - Format as 2015@trig1,trig2 2016@trig3,trig4 : Separate periods defined with @ using whitespace, triggers with comma (default: None) Default: "None".
+"IsAFII"                                 : " "                                 - Define if you are running over a fastsim sample: True or False Default: " ".
+"IsDataOverlay"                          : " "                                 - Define if you are running over a data overlay MC sample: True or False Default: " ".
+"IsRun3"                                 : "True"                              - Tells the code to setup congiguration for Run 3 Default: "False". Allowed values: True, False
+"JSF"                                    : "1.0"                               - Used for top mass analysis, default is 1.0 Default: "1.0".
+"JVTWP"                                  : "Default"                           - Set JVT WP, default is set to 'Default' (FixedEffPt for PFlow NNJvt, Tight for PFlow Jvt, and Medium for Topo Jvt). Default: "Default".
+"JVTinMETCalculation"                    : "True"                              - Perfom a JVT cut on the jets in the MET recalculation? True (default) or False. Default: "True".
+"JetCalibSequence"                       : "GSC"                               - Jet calibaration sequence. Default: "GSC". Allowed values: GSC, JMS
+"JetCollectionName"                      : "AntiKt4EMPFlowJets"                - Name of the Jet container Default: "".
+"JetEta"                                 : "2.5"                               - Absolute Jet eta cut for object selection. Default 2.5. Default: "2.5".
+"JetEtaGhostTracks"                      : "2.5"                               - Jet eta threshold for ghost track systematic variations calculation. Default 2.5 Default: "2.5".
+"JetGhostTrackDecoName"                  : "None"                              - Name of the jet decoration that holds the ghost-associated track. Default: "None".
+"JetJERSmearingModel"                    : "Full_PseudoData"                   - JER smearing model to use. Possible choices ("Full" is the only R22 pre-rec option): "All" (inc. data smearing), "All_PseudoData" (use MC as pseudo-data), "Full" (inc. data smearing), "Full_PseudoData" (use MC as pseudo-data - default), or "Simple" (MC only). Default: "Full_PseudoData". Allowed values: All, All_PseudoData, Full, Full_PseudoData, Simple
+"JetJMSOption"                           : "None"                              - None (default), JMS_frozen (The shape and magnitude of the uncertainties at m/pT = 0.25 are also used for m/pT > 0.25), JMS_scaled (The magnitude of the uncertainties at m/pT = 0.25 was scaled linearly with increasing m/pT). Default: "None".
+"JetPt"                                  : "25000"                             - Jet pT cut for object selection (in MeV). Default 25 GeV. Default: "25000.".
+"JetPtGhostTracks"                       : "25000."                            - Jet pT threshold for ghost track systematic variations calculation (in MeV). Default 25 GeV. Default: "25000.".
+"JetUncertainties_NPModel"               : "CategoryReduction"                 - Model used for JetUncertainties. Possible choices: "AllNuisanceParameters", "CategoryReduction" (default and only option for R22 pre-recs), "GlobalReduction", "StrongReduction", "SR_Scenario1" (ONLY to be used for FTAG calibrations!), or other specific StrongReduction scenarios. Default: "CategoryReduction".
+"JetUncertainties_QGFracFile"            : "None"                              - To specify a root file with quark/gluon fractions, in order to reduce FlavourComposition and response uncertainties. Default: None (i.e. no file is used and default flat 50+/-50% fraction is used). Default: "None".
+"JetUncertainties_QGHistPatterns"        : "None"                              - To specify a pattern for the name of the quark/gluon fractions histograms, or a list of DSIDs which will have their specific histogram. Two syntaxes are possible, either a single string or a list of DSIDs separated by commas:   "MyQGHisto" (the histograms with "MyQGHisto" in their names will be used for all DSIDs),   "410470,410472,345873,345874,345875" (for the listed DSIDs, histograms with the processed DSID will be used, while the flat 50+/-50% fraction will be used for the other DSIDs). Default: None (i.e. no specific pattern is looked for in the name of the provided histograms). Default: "None".
+"JetVariableSaveList"                    : "pt.eta.phi.m.passPreORSelection.btaggingLink.HadronConeExclTruthLabelID" - The list of jet variables to save (EventSaverxAODNext only). Default: "pt.eta.phi.m.passPreORSelection.btaggingLink.HadronConeExclTruthLabelID".
+"KLFitterBTaggingMethod"                 : "kNotag"                            - Recommend use kNotag or kVetoNoFit - see KLFitter TWiki Default: "kNotag".
+"KLFitterFailOnLessThanXJets"            : "False"                             - Fail if kLeadingX or kBtagPriorityXJets is set and the number of jets in the event is less than X (Default is False) Default: "False".
+"KLFitterJetSelectionMode"               : "kBtagPriorityFourJets"             - kLeadingThree , kLeadingFour , kLeadingFive , kLeadingSix , kLeadingSeven , kLeadingEight , kBtagPriorityThreeJets , kBtagPriorityFourJets , kBtagPriorityFiveJets, kBtagPrioritySixJets , kBtagPrioritySevenJets , kBtagPriorityEightJets Default: "kBtagPriorityFourJets".
+"KLFitterLH"                             : "ttbar"                             - Select likelihood depending on signal, ttbar, ttbar_JetAngles, ttbar_Angular, ttH, ttZTrilepton, ttbar_AllHadronic, ttbar_BoostedLJets Default: "ttbar".
+"KLFitterOutput"                         : "FULL"                              - Select the KLFitter output (FULL, FITTEDTOPS_ONLY, JETPERM_ONLY) Default: "FULL".
+"KLFitterSaveAllPermutations"            : "False"                             - Save All permutations to the output file (False will save only the best) Default: "False".
+"KLFitterTopMassFixed"                   : "True"                              - Fix the mass of the top quark? True or False Default: "True".
+"KLFitterTransferFunctionsPath"          : "mc12a/akt4_LCtopo_PP6"             - Select the transfer functions to use Default: "mc12a/akt4_LCtopo_PP6".
+"KillExperimental"                       : " "                                 - Disable some specific experimental feature. Default: " ".
+"LHAPDFBaseSet"                          : " "                                 - Base PDF set used to recalculate XF1,XF2 values if they are zero. Will be added to LHAPDFSets. Default: " ".
+"LHAPDFEventWeights"                     : "False"                             - Save per event weights for all PDF sets/members: True (lots of info in truth tree!), Nominal (save to the nominal tree if passes selection) or False (nothing, default). Default: "False".
+"LHAPDFSets"                             : " "                                 - List of PDF sets to calculate weights for, seperated by spaces, use LHAPDF names e.g CT10nlo NNPDF30_nlo_as_0118 MMHT2014nlo68cl Default: " ".
+"LargeJetCollectionName"                 : "None"                              - Name of the large-R Jet container Default: "".
+"LargeJetOverlapRemoval"                 : "False"                             - Perform overlap removal including large-R jets. True or False (default: False). Default: "False".
+"LargeJetSubstructure"                   : "None"                              - Setup to use when applying grooming on the large-R jet Default: "None".
+"LargeRJESJMSConfig"                     : "UFOSDMass"                         - Calibration for large-R JES/JMS. Choices are 'UFOSDMass' (default 'UFOSDMass'). Default: "UFOSDMass". Allowed values: UFOSDMass
+"LargeRJetEta"                           : "2.0"                               - Absolute large-R jet eta cut for object selection. Default 2.0. Default: "2.0".
+"LargeRJetMass"                          : "0"                                 - LargeRJet min. mass cut for object selection (in MeV). Default: "0".
+"LargeRJetPt"                            : "150000."                           - LargeRJet pT cut for object selection (in MeV). Default 150 GeV. Default: "150000.".
+"LargeRJetSubstructureVariables"         : " "                                 - List of substructure variables stored in the output separated by commas. By default no variable is added to output. Default: " ".
+"LargeRJetUncertainties_JESJERJMS_NPModel" : "CategoryJES_FullJER_FullJMS"       - Input form: {A}JES_{B}JER_{C}JMS, see https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetUncertaintiesRel21ConsolidatedLargeRScaleRes for configuration options, - for LCTopo large-R jet energy scale, energy resolution, and mass scale uncertainties Default: "CategoryJES_FullJER_FullJMS".
+"LargeRJetUncertainties_JMR_NPModel"     : "FullJMR_COMB_newBinning"           - FullJMR_COMB_newBinning (10 NP; aimed at the most precise jet-dependent measurements), SimpleJMR_COMB_newBinning (1 NP; flat 20 percent uncertainty, as it was recommended in the past)  - for LCTopo large-R jet mass resolution uncertainties Default: "FullJMR_COMB_newBinning". Allowed values: FullJMR_COMB, FullJMR_COMB_newBinning, SimpleJMR_COMB_newBinning
+"LibraryNames"                           : "libTopEventSelectionTools libTopEventReconstructionTools libHowtoExtendAnalysisTop" - Names of any libraries that need loading Default: "".
+"MCGeneratorWeights"                     : "False"                             - Do you want the OTF-computed MC generator weights (if available)? True (in truth tree), Nominal (save to the nominal tree if passes selection) or False (nothing, default) Default: "False".
+"METJetSelectionWP"                      : "Tight"                             - Set JetSelection WP to use within MetMaker with NNJvt, by default 'Tight' is used. Default: "Tight". Allowed values: Loose, Tight, Tighter
+"METSignificance"                        : "False"                             - Setting that provide option to turn on/off METSignificance Default: "False". Allowed values: True, False
+"METSignificanceSoftTermParam"           : "Random"                            - String that sets the type of resolutions that are used for the soft term, Random(met::Random), PthardParam(met::PthardParam), TSTParam(met::TSTParam) Default: "Random". Allowed values: Random, PthardParam, TSTParam
+"MuonBreakDownSystematics"               : "False"                             - Tells the MuonEfficiencyScaleFactors tools to use a more complex systematic model, if set to True. Default is False Default: "False". Allowed values: True, False
+"MuonCalibrationMode"                    : "correctData_IDMS"                  - Calibration method for muon momentum. Default: "correctData_CB". Allowed values: correctData_CB, correctData_IDMS, notCorrectData_IDMS
+"MuonCollectionName"                     : "Muons"                             - Name of the Muon container Default: "".
+"MuonDoExtraSmearingHighPt"              : "false"                             - True/False, To be used by analyses using willing to check their sensitivity to momentum resolution effects at large muon momenta and in case move to the HighPt WP - Default: false Default: "false".
+"MuonDoSmearing2stationHighPt"           : "True"                              - True/False, to turn on/off spacial corrections for 2-station muons reconstruction with missing inner MS station allowed for abs(eta)<1.3, only with MuonQuality HighPt. - Default: True Default: "True".
+"MuonEta"                                : "2.5"                               - Absolute Muon eta cut for object selection. Default 2.5. Default: "2.5".
+"MuonForcePeriod"                        : " "                                 - EXPERT OPTION! Tells the MuonEfficiencyScaleFactors tools to use a custom Period. If set to " " will use the default Default: " ".
+"MuonForceTrigger"                       : " "                                 - EXPERT OPTION! Tells the MuonEfficiencyScaleFactors tools to use a custom Trigger. If set to " " will use the default Default: " ".
+"MuonForceYear"                          : "-1"                                - EXPERT OPTION! Tells the MuonEfficiencyScaleFactors tools to use a custom Year. If set to -1 will use the default Default: "-1".
+"MuonIsolation"                          : "Tight_VarRad"                      - Which isolation working point for muon selection Default: "PflowTight_FixedRad".
+"MuonIsolationLoose"                     : "None"                              - Which isolation working point for loose muon selection Default: "PflowTight_FixedRad".
+"MuonIsolationSF"                        : "None"                              - Force muon isolation SF to specific WP (e.g. None). Default: " ".
+"MuonIsolationSFLoose"                   : " "                                 - Force loose muon isolation SF to specific WP (e.g. None). Default: " ".
+"MuonIsolationWPs"                       : "PflowTight_VarRad PflowLoose_VarRad Tight_VarRad Loose_VarRad" - Space-separated list of muon isolation WPs for which to store decisions as auxdecor<char> AnalysisTop_Isol_nameOfWorkingPoint. Default: " ".
+"MuonPt"                                 : "25000"                             - Muon pT cut for object selection (in MeV). Default 25 GeV. Default: "25000".
+"MuonQuality"                            : "Medium"                            - Muon quality cut for object selection. Options are VeryLoose, Loose, Medium (default) and Tight Default: "Medium".
+"MuonQualityLoose"                       : "Medium"                            - Muon quality cut for object selection. Options are VeryLoose, Loose, Medium (default) and Tight Default: "Medium".
+"MuonSFCustomInputFolder"                : " "                                 - EXPERT OPTION! Tells the MuonEfficiencyScaleFactors tools to use a custom input folder path. If set to " " will use the default Default: " ".
+"MuonSFCustomInputFolderTrigger"         : " "                                 - EXPERT OPTION! Tells the MuonEfficiencyScaleFactors trigger tools to use a custom input folder path. If set to " " will use the default Default: " ".
+"MuonSmearingSystematicModel"            : "Corr_Scale"                        - Systematic scheme for momentum scale and resolution. Default: "Corr_Scale". Allowed values: Corr_Scale, Decorr_Scale
+"MuonTriggers"                           : "None"                              - Deprecated, use GlobalTriggers instead. Default: "None".
+"MuonTriggersLoose"                      : "None"                              - Deprecated, use GlobalTriggersLoose instead. Default: "None".
+"MuonUse2stationHighPt"                  : "True"                              - Allows muon reconstruction using 2-station muons with missing inner MS station for |eta|<1.3 - Default: True (only for HighPt) Default: "True".
+"MuonUse2stationHighPtLoose"             : "True"                              - Allows muon reconstruction using 2-station muons with missing inner MS station for |eta|<1.3 for Loose tree - Default: True (only for HighPt) Default: "True".
+"MuonUseMVALowPt"                        : "False"                             - Turn on MVA for low-pT muons (only for LowPt WP). Optimized to improve efficiency and hadron rejection. - Default: False Default: "False".
+"MuonUseMVALowPtLoose"                   : "False"                             - Turn on MVA for low-pT muons (only for LowPt WP) for Loose tree. Optimized to improve efficiency and hadron rejection. - Default: False Default: "False".
+"MuonVariableSaveList"                   : "pt.eta.phi.m.author.charge.ptvarcone30.topoetcone20.muonType.passPreORSelection" - The list of muon variables to save (EventSaverxAODNext only). Default: "pt.eta.phi.m.author.charge.ptvarcone30.topoetcone20.muonType.passPreORSelection".
+"Muond0Sig"                              : "3."                                - Muon d0 significance cut for object selection. Default 3 Default: "3.".
+"Muondeltaz0"                            : "0.5"                               - Muon delta z0 cut for object selection. Default 0.5 mm Default: "0.5".
+"NEvents"                                : "500"                               - The number of events that you want to run on (for testing). If 0 then all events are run. Default: "0".
+"NominalWeightFallbackIndex"             : "-1"                                - Index of nominal weight in MC weights vector. This option is only used in case the MC sample has broken metadata. (Default: -1 means no fallback index specified, rely on metadata and crash if metadata cannot be read) Default: "-1".
+"NominalWeightNames"                     : "" nominal ","nominal","Default","Weight","1001"," muR=0.10000E+01 muF=0.10000E+01 ",""," "," dyn=   3 muR=0.10000E+01 muF=0.10000E+01 "," mur=1 muf=1 ", " dyn=   0 muR=0.10000E+01 muF=0.10000E+01 "" - List of nominal weight names to attempt to retrieve. Attempts are made in the order as specified. If none of the names can be found, we will crash with error message. Use index instead in such case. Default: "" nominal ","nominal","Default","Weight","1001"," muR=0.10000E+01 muF=0.10000E+01 ",""," "," dyn=   3 muR=0.10000E+01 muF=0.10000E+01 "," mur=1 muf=1 ", " dyn=   0 muR=0.10000E+01 muF=0.10000E+01 "".
+"NumberOfBootstrapReplicas"              : "100"                               - Define integer number of replicas to be stored with bootstrapping, Default 100 Default: "100".
+"ObjectSelectionName"                    : "top::ObjectLoaderStandardCuts"     - Code used to define objects, e.g. ObjectLoaderStandardCuts Default: "".
+"OutputEvents"                           : "SelectedEvents"                    - AllEvents (saves all events + decison bits), SelectedEvents (saves only the events passing your cuts) Default: "".
+"OutputFileBasketSizePrimitive"          : "4096"                              - Set the TTree basket size for primitive objects (int, float, ...). (default: 4096) Default: "4096".
+"OutputFileBasketSizeVector"             : "40960"                             - Set the TTree basket size for vector objects. (default: 40960) Default: "40960".
+"OutputFileNEventAutoFlush"              : "1000"                              - Set the number of events after which the TTree cache is optimised, ie setAutoFlush(nEvents). (default: 1000) Default: "1000".
+"OutputFileSetAutoFlushZero"             : "False"                             - setAutoFlush(0) on EventSaverFlatNtuple for ANALYSISTO-44 workaround. (default: False) Default: "False".
+"OutputFilename"                         : "output.root"                       - The file that will contain the output histograms and trees Default: "".
+"OutputFormat"                           : "top::EventSaverFlatNtuple"         - Format, can be user defined, e.g. top::EventSaverFlatNtuple Default: "".
+"OverlapRemovalLeptonDef"                : "Tight"                             - Special: run overlap removal on : Tight (top default) or Loose (not top default) lepton definitions Default: "Tight".
+"OverlapRemovalParticleLevelUseRapidity" : "True"                              - Use rapidity instead of pseudo-rapidity for DeltaR calculation for overlap removal in particle level Default: "True". Allowed values: True, False
+"OverlapRemovalProcedure"                : "recommended"                       - Overlap removal procedure to be used. Options include: recommended [default], jetmuApplyRelPt, harmonized, Boosted, BoostedSlidingDREl, BoostedSlidingDRMu, BoostedSlidingDRElMu, noTauJetOLR,  noPhotonMuOR, noPhotonMuOrJetOR Default: "recommended".
+"OverlapRemovalSlidingInnerDRel"         : "0.2"                               - Overlap removal inner radius to be used for electron SlidingDR , Default: "0.2".
+"OverlapRemovalSlidingInnerDRmu"         : "0.2"                               - Overlap removal inner radius to be used for muon SlidingDR , Default: "0.2".
+"PDFInfo"                                : "False"                             - Do you want the PDF info? True (in truth tree), Nominal (save to the nominal tree if passes selection) or False (nothing, default) Default: "False".
+"PRWActualMu_AF"                         : " "                                 - List of actual mu files only for fast sim samples, seperated by spaces (nothing by default) Default: " ".
+"PRWActualMu_FS"                         : " "                                 - List of actual mu files for full sim samples, seperated by spaces (nothing by default) Default: " ".
+"PRWConfigFiles"                         : " "                                 - List of PU config files, seperated by spaces (nothing by default) - Not compatible with FS/AF options Default: " ".
+"PRWConfigFiles_AF"                      : "PileupReweighting/mc21_common/mc21a.410000.physlite.prw.v1.root" - List of PU config files only for fast sim samples, seperated by spaces (nothing by default) Default: " ".
+"PRWConfigFiles_FS"                      : "PileupReweighting/mc21_common/mc21a.410000.physlite.prw.v1.root" - List of PU config files only for full sim samples, seperated by spaces (nothing by default) Default: " ".
+"PRWCustomScaleFactor"                   : " "                                 - Specify custom scale-factor and up/down variations, for specific studies.Format is 'nominal:up:down'.If nothing is set, the default values will be used (recommended). Default: " ".
+"PRWLumiCalcFiles"                       : "GoodRunsLists/data22_13p6TeV/20220902/ilumicalc_histograms_None_430536-430648_OflLumi-Run3-001.root" - List of PU lumicalc files, seperated by spaces (nothing by default) Default: " ".
+"PRWMuDependent"                         : "True"                              - Use mu dependent random run numbers for MC. True or False (default True) Default: "True".
+"PRWPeriodAssignments"                   : " "                                 - Specify period number assignments to run numbers ranges in this form: "XXX:XXX:XXX", where XXX are runnumbers, first number is the associated run number, second number is the period block start, the third number is the period block end. You can pass any number of these sets (total number of provided RunNumbers needs to be divisible by 3). Default is used if not specified Default: " ".
+"PRWUnrepresentedDataTolerance"          : "0.05"                              - Specify value between 0 and 1 to represent acceptable fraction of unrepresented data in PRW [default: 0.05] Default: "0.05".
+"PRWUseGRLTool"                          : "False"                             - Pass the GRL tool to the PU reweighting tool (False by default) Default: "False".
+"PerfStats"                              : "None"                              -  I/O Performance printouts. None, Summary or Full Default: "None".
+"PhotonCollectionName"                   : "None"                              - Name of the Photon container Default: "".
+"PhotonEta"                              : "2.5"                               - Absolute Photon eta cut for object selection. Default 2.5. Default: "2.5".
+"PhotonID"                               : "Tight"                             - Type of photon. Definition to use : Tight, Loose and None. Default: "Tight".
+"PhotonIDLoose"                          : "Loose"                             - Type of photon for background. Definition to use : Tight, Loose, None. Default: "Loose".
+"PhotonIsolation"                        : "FixedCutTight"                     - Which isolation working point for photon selection Default: "FixedCutTight".
+"PhotonIsolationLoose"                   : "FixedCutLoose"                     - Which isolation working point for photon selection Default: "FixedCutLoose".
+"PhotonIsolationWPs"                     : " "                                 - Space-separated list of photon isolation WPs for which to store decisions as auxdecor<char> AnalysisTop_Isol_nameOfWorkingPoint. Default: " ".
+"PhotonPt"                               : "25000."                            - Photon pT cut for object selection (in MeV). Default 25 GeV. Default: "25000.".
+"PhotonVariableSaveList"                 : "pt.eta.phi.m.charge.ptvarcone20.topoetcone20.passPreORSelection" - The list of photon variables to save (EventSaverxAODNext only). Default: "pt.eta.phi.m.charge.ptvarcone20.topoetcone20.passPreORSelection".
+"RCInputJetEtaMax"                       : "2.5"                               - Max |Eta| cut for RC jet inputs collection. Parameter is shared between RC and VarRC jets. Default 2.5 Default: "2.5".
+"RCInputJetPtMin"                        : "30000."                            - Min Pt cut for RC jet inputs collection. Parameter is shared between RC and VarRC jets. Default 30000. [MeV] Default: "30000.".
+"RCJetEta"                               : "2.0"                               - Reclustered Jet eta cut for object selection. Default 2.0. Default: "2.0".
+"RCJetPt"                                : "100000."                           - Reclustered Jet pT cut for object selection (in MeV). Default 100000 MeV. Default: "100000.".
+"RCJetRadius"                            : "1.0"                               - Reclustered Jet radius for object selection. Default 1.0 Default: "1.0".
+"RCJetTrim"                              : "0.05"                              - Reclustered Jet trimming cut for object selection. Default 0.05. Default: "0.05".
+"RecomputeCPVariables"                   : "True"                              - Run the CP tools to force computation of variables that may already exist in derivations? (default: True) Default: "True".
+"RedefineMCMCMap"                        : " "                                 - Dictionary for translating the shower names from TopDataPreparation. Format: "shower1:shower2,shower3:shower4". Default: " ".
+"SaveBootstrapWeights"                   : "False"                             - Set to true in order to save Poisson bootstrap weights,True or False (default False) Default: "False".
+"SaveFailForwardJVTJets"                 : "False"                             - Save the jets that failed the fJVT cut? 'False' (default), or 'True' Default: "False".
+"SaveFailJVTJets"                        : "False"                             - Save the jets that failed the JVT cut? False (default) or True. Default: "False".
+"SoftMuonAdditionalTruthInfo"            : "False"                             - Experimental: store additional truth information on soft muons particle-level origin: True or False (default) Default: "False".
+"SoftMuonAdditionalTruthInfoCheckPartonOrigin" : "False"                             - Experimental: store additional truth information on soft muons parton-level origin; requires SoftMuonAdditionalTruthInfo to be true; automatically disabled if PS!=pythia8 and PS!=herwigpp : True or False (default) Default: "False".
+"SoftMuonAdditionalTruthInfoDoVerbose"   : "False"                             - Debug output for soft muon additional truth-level information: True or False (default) Default: "False".
+"SoftMuonDRJet"                          : "0.4"                               - Soft Muon maximum dR wrt nearest selected jet. Can be set to 999. to keep all soft muons. Default 0.4 Default: "0.4".
+"SoftMuonDRJetUseRapidity"               : "False"                             - How to calculate DR(soft muon,jet) for the SoftMuonDRJet cut: True -> use rapidity; False -> use pseudorapidity. Default False Default: "False".
+"SoftMuonEta"                            : "2.5"                               - Absolute Soft Muon eta cut for object selection. Default 2.5. Default: "2.5".
+"SoftMuonPt"                             : "4000"                              - Soft Muon pT cut for object selection (in MeV). Default 4 GeV. Default: "4000".
+"SoftMuonQuality"                        : "Tight"                             - Soft Muon quality cut for object selection. Options are Loose, Medium, Tight (default), LowPt Default: "Tight".
+"SoftMuonUseMVALowPt"                    : "False"                             - Turn on MVA for low-pT soft muons (only for LowPt WP). Optimized to improve efficiency and hadron rejection. - Default: False Default: "False".
+"StoreJetTruthLabels"                    : "True"                              - Flag to store truth labels for jets - True (default) or False Default: "True".
+"StorePerJetBtagSFs"                     : "False"                             - Store per-jet btag SFs Default: "False".
+"Systematics"                            : "Nominal"                           - What to run? Nominal (just the nominal), All(do all systematics)  Default: "Nominal".
+"TDPPath"                                : "dev/AnalysisTop/TopDataPreparation/XSection-MC21-13p6TeV.data" - Path to TopDataPreparation file (accessible via PathResolver) Default: "dev/AnalysisTop/TopDataPreparation/XSection-MC16-13TeV.data".
+"TauCollectionName"                      : "None"                              - Name of the Tau container Default: "".
+"TauEleIDWP"                             : "RNNLoose"                          - Tau electron ID WP. Default: "RNNLoose". Allowed values: None, RNNLoose, RNNMedium, RNNTight
+"TauEleIDWPLoose"                        : "RNNLoose"                          - Loose Tau electron ID WP. Default: "RNNLoose". Allowed values: None, RNNLoose, RNNMedium, RNNTight
+"TauEtaRegions"                          : "[0., 1.37, 1.52, 2.5]"             - Eta regions used for both tight and loose taus.Default vetoing crack region [0., 1.37, 1.52, 2.5] Default: "[0., 1.37, 1.52, 2.5]".
+"TauJetConfigFile"                       : "Default"                           - Config file to configure tau selection. If anything other than 'Default'then all cuts are taken from the config file rather than other options. Default: "Default".
+"TauJetConfigFileLoose"                  : "Default"                           - Config file to configure loose tau selection. If anything other than 'Default'then all cuts are taken from the config file rather than other options. Default: "Default".
+"TauJetIDWP"                             : "RNNMedium"                         - Tau jet ID WP. Default: "RNNMedium". Allowed values: None, RNNLoose, RNNMedium, RNNTight
+"TauJetIDWPLoose"                        : "RNNLoose"                          - Loose Tau jet ID WP. Default: "RNNLoose". Allowed values: None, RNNLoose, RNNMedium, RNNTight
+"TauMuOLR"                               : "True"                              - Apply tau-electron overlap removal. Default: "True". Allowed values: True, False
+"TauMuOLRLoose"                          : "True"                              - Apply loose tau-electron overlap removal. Default: "True". Allowed values: True, False
+"TauPt"                                  : "25000"                             - Pt cut applied to both tight and loose taus (in MeV).Default 25 GeV. Default: "25000".
+"TauVariableSaveList"                    : "pt.eta.phi.m.charge.passPreORSelection" - The list of tau variables to save (EventSaverxAODNext only). Default: "pt.eta.phi.m.charge.passPreORSelection".
+"TopParticleLevel"                       : "False"                             - Perform particle level selection (stored in particleLevel tree)? True or False Default: "False".
+"TopPartonHistory"                       : "False"                             - Topology to be assumed when reconstructing parton-level history. Default: "False". Allowed values: ttbar, ttH, ttbarlight, tb, Wtb, tchannel, ttz, ttgamma, tHq, tZq, False
+"TopPartonLevel"                         : "False"                             - Perform parton level analysis (stored in truth tree)? True or False Default: "True".
+"TrackCollectionName"                    : "None"                              - Name of the track container Default: "None".
+"TrackEta"                               : "2.5"                               - Absolute Track eta cut for object selection. Default 2.5. Default: "2.5".
+"TrackJetCollectionName"                 : "None"                              - Name of the track Jet container Default: "None".
+"TrackJetEta"                            : "2.5"                               - Absolute Track Jet eta cut for object selection. Default 2.5. Default: "2.5".
+"TrackJetPt"                             : "10000."                            - Track Jet pT cut for object selection (in MeV). Default 10 GeV. Default: "10000.".
+"TrackPt"                                : "0.5"                               - Track pT cut for object selection (in MeV). Default 0.5 GeV. Default: "0.5".
+"TrackQuality"                           : "TightPrimary"                      - Track quality cut for object selection. Options are TightPrimary,... Default: "TightPrimary".
+"TriggerMatchingElementRelinking"        : "True"                              - Workaround for formats with broken trigger matching (e.g. MC20 p5226), relink offline and online objects. Default: "True".
+"TruthBlockInfo"                         : "False"                             - Do you want to dump the full Truth block info? True or False Default: "False".
+"TruthCollectionName"                    : "None"                              - Name of the Truth container Default: "".
+"TruthElectronCollectionName"            : "TruthElectrons"                    - Name of the Truth Electron container Default: "TruthElectrons".
+"TruthElectronEta"                       : "2.5"                               - Absolute electron eta cut for [Particle Level / Truth] object selection. Default 2.5. Default: "2.5".
+"TruthElectronPt"                        : "25000"                             - Electron pT cut for [Particle Level / Truth] object selection (in MeV). Default 25 GeV. Default: "25000".
+"TruthJetCollectionName"                 : "AntiKt4TruthDressedWZJets"         - Name of the Truth Jet container Default: "".
+"TruthJetEta"                            : "2.5"                               - Absolute Jet eta cut for [Particle Level / Truth] object selection. Default 2.5. Default: "2.5".
+"TruthJetPt"                             : "25000"                             - Jet pT cut for [Particle Level / Truth] object selection (in MeV). Default 25 GeV. Default: "25000".
+"TruthLargeRJetCollectionName"           : "None"                              - Name of the Truth Large R Jet container Default: "None".
+"TruthLargeRJetEta"                      : "2.5"                               - Absolute Large R Jet eta cut for [Particle Level / Truth] object selection. Default 2.5. Default: "2.5".
+"TruthLargeRJetPt"                       : "25000"                             - Large R Jet pT cut for [Particle Level / Truth] object selection (in MeV). Default 25 GeV. Default: "25000".
+"TruthMETCollectionName"                 : "MET_Truth"                         - Name of the Truth MET container Default: "MET_Truth".
+"TruthMuonCollectionName"                : "TruthMuons"                        - Name of the Truth Muon container Default: "TruthMuons".
+"TruthMuonEta"                           : "2.5"                               - Absolute Muon eta cut for [Particle Level / Truth] object selection. Default 2.5. Default: "2.5".
+"TruthMuonPt"                            : "25000"                             - Muon pT cut for [Particle Level / Truth] object selection (in MeV). Default 25 GeV. Default: "25000".
+"TruthPhotonCollectionName"              : "None"                              - Name of the Truth Photon container Default: "None".
+"TruthPhotonEta"                         : "2.5"                               - Absolute Photon eta cut for [Particle Level / Truth] object selection. Default 2.5. Default: "2.5".
+"TruthPhotonIsolation"                   : "ptcone20 0.1"                      - Configuration option for isolation applied to [Particle Level / Truth] photons. This can be False / None (isolation requirement disabled), True (use default isolation), or a configuration in the format `VAR CUT`, where VAR is one of the isolation variables and CUT is the cut applied as `VAR / pt < CUT`. Default: "ptcone20 0.1".
+"TruthPhotonOrigin"                      : "WBoson,ZBoson,SinglePhot,Higgs,HiggsMSSM,WZMSSM,PromptPhot,SUSY,UndrPhot,FSRPhot" - Potential origin of [Particle Level / Truth] photons. Comma separated list of particle origin values as given by MCTruthClassifier (string names). Default: "WBoson,ZBoson,SinglePhot,Higgs,HiggsMSSM,WZMSSM,PromptPhot,SUSY,UndrPhot,FSRPhot".
+"TruthPhotonPt"                          : "25000"                             - Photon pT cut for [Particle Level / Truth] object selection (in MeV). Default 25 GeV. Default: "25000".
+"TruthSoftMuonEta"                       : "2.5"                               - Absolute Soft Muon eta cut for [Particle Level / Truth] object selection. Default 2.5. Default: "2.5".
+"TruthSoftMuonPt"                        : "4000"                              - Soft Muon pT cut for [Particle Level / Truth] object selection (in MeV). Default 4 GeV. Default: "4000".
+"TruthTauCollectionName"                 : "None"                              - Name of the Truth tau container Default: "None".
+"TruthTauEta"                            : "2.5"                               - Tau eta cut for [Particle Level / Truth] object selection. Default 2.5. Default: "2.5".
+"TruthTauPt"                             : "25000"                             - Tau pT cut for [Particle Level / Truth] object selection (in MeV). Default 25 GeV. Default: "25000".
+"UseAntiMuons"                           : "false"                             - Use AntiMuons for fake estimate. Default: false Default: "false".
+"UseBadBatmanCleaning"                   : "False"                             - Switch to turn on BadBatman cleanig. Default: "False".
+"UseEgammaLeakageCorrection"             : "True"                              - True/False. Switch on/off leakage correction -- REQUIRES ptag>p3947 (Default True). Default: "True".
+"UseElectronChargeIDSelection"           : "False"                             - True/False. Switch on/off electron charge ID selection (Default False). Default: "False".
+"UseEventLevelJetCleaningTool"           : "False"                             - Switch to turn on event-level jet cleaning tool (for testing), True or False (default False) Default: "False".
+"UseGlobalLeptonTriggerSF"               : "False"                             - Switch to activate event-level trigger scale factors allowing multiple OR of single-, di-, tri- lepton triggers, True or False (default False) Default: "False".
+"UseLooseObjectsInMETInLooseTree"        : "False"                             - Experimental: use loose objects when rebuilding the MET for the loose tree : True or False (default = False) Default: "False".
+"UseLooseObjectsInMETInNominalTree"      : "False"                             - Experimental: use loose objects when rebuilding the MET for the nominal tree : True or False (default = False) Default: "False".
+"UseRCJetAdditionalSubstructure"         : "False"                             - Calculate Additional Reclustered Jet Substructure Variables. Default False Default: "False".
+"UseRCJetSubstructure"                   : "False"                             - Calculate Reclustered Jet Substructure Variables. Default False Default: "False".
+"UseRCJets"                              : "False"                             - Use Reclustered Jets. Default False. Default: "False".
+"UseSoftMuons"                           : "False"                             - True to use soft muons, False (default) otherwise Default: "False".
+"UseVarRCJetAdditionalSubstructure"      : "False"                             - Calculate Additional Variable-R Reclustered Jet Substructure Variables. Default False Default: "False".
+"UseVarRCJetSubstructure"                : "False"                             - Calculate Variable-R Reclustered Jet Substructure Variables. Default False Default: "False".
+"UseVarRCJets"                           : "False"                             - Use Reclustered Jets (Variable-R Jets). Default False. Default: "False".
+"VarRCJetEta"                            : "2.0"                               - Reclustered Jet (variable-R) eta cut for object selection. Default 2.0. Default: "2.0".
+"VarRCJetMassScale"                      : "m_w,m_z,m_h,m_t"                   - Reclustered Jet (variable-R) list of mass scale values (m_w,m_z,m_h,m_t). By default use all. Default: "m_w,m_z,m_h,m_t".
+"VarRCJetMaxRadius"                      : "1.0"                               - Reclustered Jet (variable-R) max. radius cut for object selection. Default 1.0 Default: "1.0".
+"VarRCJetPt"                             : "100000."                           - Reclustered Jet (variable-R) pT cut for object selection (in MeV). Default 100000 MeV. Default: "100000.".
+"VarRCJetRho"                            : "2"                                 - Reclustered Jet (variable-R) list of rho values (). Default 2. Default: "2".
+"VarRCJetTrim"                           : "0.05"                              - Reclustered Jet (variable-R) trimming cut for object selection. Default 0.05. Default: "0.05".
+"WriteMETBuiltWithLooseObjects"          : "False"                             - Write a separate branch with the met built with loose objects in the output for tests: True or False (default = False) Default: "False".
+"WriteTrackingData"                      : "True"                              - Whether to generate and store analysis-tracking data (default: True) Default: "True".
+"applyTTVACut"                           : "True"                              - Decide if to apply lepton z0/d0 cuts Default: "True".
+"bJSF"                                   : "1.0"                               - Used for top mass analysis, default is 1.0 Default: "1.0".
+
+
+Package.TopAnalysis      INFO    Attempting to load library: libTopEventSelectionTools.so
+Package.TopAnalysis      INFO    Attempting to load library: libTopEventReconstructionTools.so
+Package.TopAnalysis      INFO    Attempting to load library: libHowtoExtendAnalysisTop.so
+Package.TopAnalysis      INFO    Input filenames:
+
+Package.TopAnalysis      INFO    1/1 File: /lustre/collider/wangzhen/atlas/2a4b/dataset/mc23/DAOD_PHYS.34326943._000580.pool.root.1
+Package.TopAnalysis      INFO    Entries: 20000
+Package.TopAnalysis      INFO    Trying to read FileMetaData
+Package.TopAnalysis      INFO    Reading the following options from FileMetaData:
+dataType           -> StreamDAOD_PHYS
+mcProcID           -> 601229
+isMC               -> 1
+simFlavour         -> FullG4_QS
+isDataOverlay      -> 0
+Package.TopAnalysis      INFO    Derivation stream is -> PHYS
+Package.TopConfiguration WARNING jetPtGhostTracks set to 20000 to ensure that all the selected jets have the ghost tracks associated
+Package.TopConfiguration INFO    The following b-tagging WPs are configured for tagging decision for AntiKt4EMPFlowJets
+Package.TopConfiguration INFO    BTagging algorithm: DL1dv01_FixedCutBEff_77
+Package.TopConfiguration INFO    Out of those, the calibration SFs will be computed for following WPs:
+Package.TopConfiguration INFO    BTagging algorithm: DL1dv01_FixedCutBEff_77
+PathResolver             WARNING Locating dev file dev/AnalysisTop/TopDataPreparation/XSection-MC21-13p6TeV.data. Do not let this propagate to a release
+Package.TopAnalysis      INFO    SampleXsection::Found /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/dev/AnalysisTop/TopDataPreparation/XSection-MC21-13p6TeV.data
+Package.TopAnalysis      INFO    DSID: 601229	ShowerIndex: 2 PS generator: pythia8
+top::TopToolStore        INFO    top::TopToolStore initialize...
+top::TriggerCPTools      INFO    top::TriggerCPTools initialize...
+xAODConfigTool           INFO    Initialising...
+TrigDecisionTool         INFO    Initializing Trig::TrigDecisionTool (standalone version even for athena)
+TrigDecisionTool         INFO    Initialized TDT
+top::OtherCPTools        INFO    top::OtherCPTools initialize...
+top::OtherCPTools        INFO    This sample is full sim
+top::OtherCPTools        INFO    PRW tool is being configured only with full simulation (FS) config files
+CP::TPileupReweighting... INFO    Using MC16 Period configuration
+CP::TPileupReweighting... INFO    Using MC16 Period configuration
+CP::TPileupReweighting... INFO    Using MC16 Period configuration
+CP::TPileupReweighting... INFO    Adding LumiMetaData (scale factor=0.970874)...
+CP::TPileupReweighting... INFO    Adding LumiMetaData (scale factor=1.010101)...
+CP::TPileupReweighting... INFO    Adding LumiMetaData (scale factor=0.934579)...
+DefaultWeightTool        INFO    AsgTool DefaultWeightTool @ 0x7013320
+PMGSherpa22VJetsWeight...INFO    Initializing PMGSherpa22VJetsWeightTool...
+PMGTruthWeightTool       INFO    Attempting to retrieve truth meta data from the first file...
+PMGTruthWeightTool       INFO    Attempting to retrieve MC channel number...
+PMGTruthWeightTool       INFO    ... MC channel number identified as 601229
+PMGTruthWeightTool       INFO    Loaded xAOD::TruthMetaDataContainer
+PMGTruthWeightTool       INFO    Attempting to load weight meta data from xAOD TruthMetaData for channel 601229
+PMGTruthWeightTool       INFO    Successfully loaded information about 194 weights
+top::EgammaCPTools       INFO    top::EgammaCPTools initialize...
+EgammaCalibrationAndSm...INFO    Initialization
+GainUncertainty          INFO    opening file /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonFourMomentumCorrection/v14/gain_uncertainty_specialRun.root
+egammaLayerRecalibTool   INFO    using scale es2017_21.0_v0
+egammaLayerRecalibTool   INFO    using scale run2_alt_with_layer2_r21_v0
+egammaLayerRecalibTool   INFO    using scale layer2_alt_run2_r21_v0
+egammaLayerRecalibTool   INFO    using scale ps_2016_r21_v0
+EgammaCalibrationAndSm...INFO    ESModel: es2022_R22_PRE
+EgammaCalibrationAndSm...INFO    ResolutionType: SigmaEff90
+EgammaCalibrationAndSm...INFO    layer correction = 2
+EgammaCalibrationAndSm...INFO    PS correction = 2
+EgammaCalibrationAndSm...INFO    S12 correction = 2
+EgammaCalibrationAndSm...INFO    layer2 recalibration = 2
+EgammaCalibrationAndSm...INFO    intermodule correction = 1
+EgammaCalibrationAndSm...INFO    phi uniformity correction = 1
+EgammaCalibrationAndSm...INFO    gain correction = 0
+EgammaCalibrationAndSm...INFO    smearing = 2
+EgammaCalibrationAndSm...INFO    insitu scales = 2
+EgammaCalibrationAndSm...INFO    ep combination = 0
+EgammaCalibrationAndSm...INFO    use MVA calibration = 2
+EgammaCalibrationAndSm...INFO    use temperature correction 2015 = 2
+EgammaCalibrationAndSm...INFO    use uA2MeV correction 2015 1/2 week = 2
+PhotonFudgeTool          INFO    No config file set! Using default shift values for the electron shifter.
+FudgeMCTool               INFO    Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/ElectronPhotonShowerShapeFudgeTool/v2/PhotonFudgeFactors.root
+AsgPhotonEfficiencyCor...INFO     Using path = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/PhotonEfficiencyCorrection/2015_2025/rel22.2/2022_Summer_Prerecom_v1/efficiencySF.offline.Tight.13TeV.rel22.25ns.con.v01.root
+AsgPhotonEfficiencyCor...INFO     Using path = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/PhotonEfficiencyCorrection/2015_2025/rel22.2/2022_Summer_Prerecom_v1/efficiencySF.offline.Tight.13TeV.rel22.25ns.unc.v01.root
+AsgPhotonEfficiencyCor...INFO     Using path = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/PhotonEfficiencyCorrection/2015_2025/rel22.2/2022_Summer_Prerecom_v1/efficiencySF.Isolation.isolFixedCutLoose.13TeV.rel21.25ns.con.TrkCaloRadZTrkCaloSgPh.v03.preRun3.root
+AsgPhotonEfficiencyCor...INFO     Using path = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/PhotonEfficiencyCorrection/2015_2025/rel22.2/2022_Summer_Prerecom_v1/efficiencySF.Isolation.isolFixedCutLoose.13TeV.rel21.25ns.unc.TrkCaloRadZTrkCaloSgPh.v03.preRun3.root
+AsgPhotonEfficiencyCor...INFO     Using path = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/PhotonEfficiencyCorrection/2015_2025/rel22.2/2022_Summer_Prerecom_v1/efficiencySF.Isolation.isolFixedCutTight.13TeV.rel21.25ns.con.TrkCaloRadZTrkCaloSgPh.v03.preRun3.root
+AsgPhotonEfficiencyCor...INFO     Using path = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/PhotonEfficiencyCorrection/2015_2025/rel22.2/2022_Summer_Prerecom_v1/efficiencySF.Isolation.isolFixedCutTight.13TeV.rel21.25ns.unc.TrkCaloRadZTrkCaloSgPh.v03.preRun3.root
+AsgPhotonEfficiencyCor...INFO     Using path = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/PhotonEfficiencyCorrection/2015_2025/rel22.2/2022_Summer_Prerecom_v1/efficiencySF.Isolation.isolFixedCutTightCaloOnly.13TeV.rel21.25ns.con.CaloRadZCaloSgPh.v03.preRun3.root
+AsgPhotonEfficiencyCor...INFO     Using path = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/PhotonEfficiencyCorrection/2015_2025/rel22.2/2022_Summer_Prerecom_v1/efficiencySF.Isolation.isolFixedCutTightCaloOnly.13TeV.rel21.25ns.unc.CaloRadZCaloSgPh.v03.preRun3.root
+top::EgammaCPTools       INFO    Setting up Electrons SF tool for TOTAL correlation model
+top::EgammaCPTools       INFO    Configuring : name=AsgElectronEfficiencyCorrectionTool_Reco map=UseEgammaRecommended reco_key=Reconstruction ID_key= iso_key= trigger_key=data_type=1 correlation_model=TOTAL etaBinning= etBinning=
+top::EgammaCPTools       INFO     Adding RecoKey    : Reconstruction
+top::EgammaCPTools       INFO    Configuring : name=AsgElectronEfficiencyCorrectionTool_ID map=UseEgammaRecommended reco_key= ID_key=TightLLH iso_key= trigger_key=data_type=1 correlation_model=TOTAL etaBinning= etBinning=
+top::EgammaCPTools       INFO     Adding IDKey      : Tight
+top::EgammaCPTools       INFO    Configuring : name=AsgElectronEfficiencyCorrectionTool_IDLoose map=UseEgammaRecommended reco_key= ID_key=TightLLH iso_key= trigger_key=data_type=1 correlation_model=TOTAL etaBinning= etBinning=
+top::EgammaCPTools       INFO     Adding IDKey      : Tight
+top::EgammaCPTools       INFO    Configuring : name=AsgElectronEfficiencyCorrectionTool_TriggerSF map=UseEgammaRecommended reco_key= ID_key=TightLLH iso_key=Tight_VarRad trigger_key=2022_e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHIdata_type=1 correlation_model=TOTAL etaBinning= etBinning=
+top::EgammaCPTools       INFO     Adding IDKey      : Tight
+top::EgammaCPTools       INFO     Adding IsoKey     : Tight_VarRad
+top::EgammaCPTools       INFO     Adding TriggerKey : 2022_e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHI
+top::EgammaCPTools       INFO    Configuring : name=AsgElectronEfficiencyCorrectionTool_TriggerSFLoose map=UseEgammaRecommended reco_key= ID_key=TightLLH iso_key=Tight_VarRad trigger_key=2022_e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHIdata_type=1 correlation_model=TOTAL etaBinning= etBinning=
+top::EgammaCPTools       INFO     Adding IDKey      : Tight
+top::EgammaCPTools       INFO     Adding IsoKey     : Tight_VarRad
+top::EgammaCPTools       INFO     Adding TriggerKey : 2022_e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHI
+top::EgammaCPTools       INFO    Configuring : name=AsgElectronEfficiencyCorrectionTool_Trigger map=UseEgammaRecommended reco_key= ID_key=TightLLH iso_key=Tight_VarRad trigger_key=Eff_2022_e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHIdata_type=1 correlation_model=TOTAL etaBinning= etBinning=
+top::EgammaCPTools       INFO     Adding IDKey      : Tight
+top::EgammaCPTools       INFO     Adding IsoKey     : Tight_VarRad
+top::EgammaCPTools       INFO     Adding TriggerKey : Eff_2022_e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHI
+top::EgammaCPTools       INFO    Configuring : name=AsgElectronEfficiencyCorrectionTool_TriggerLoose map=UseEgammaRecommended reco_key= ID_key=TightLLH iso_key=Tight_VarRad trigger_key=Eff_2022_e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHIdata_type=1 correlation_model=TOTAL etaBinning= etBinning=
+top::EgammaCPTools       INFO     Adding IDKey      : Tight
+top::EgammaCPTools       INFO     Adding IsoKey     : Tight_VarRad
+top::EgammaCPTools       INFO     Adding TriggerKey : Eff_2022_e26_lhtight_ivarloose_L1EM22VHI_OR_e60_lhmedium_L1EM22VHI_OR_e140_lhloose_L1EM22VHI
+top::EgammaCPTools       INFO    Configuring : name=AsgElectronEfficiencyCorrectionTool_Iso map=UseEgammaRecommended reco_key= ID_key=TightLLH iso_key=Tight_VarRad trigger_key=data_type=1 correlation_model=TOTAL etaBinning= etBinning=
+top::EgammaCPTools       INFO     Adding IDKey      : Tight
+top::EgammaCPTools       INFO     Adding IsoKey     : Tight_VarRad
+top::EgammaCPTools       INFO    Configuring : name=AsgElectronEfficiencyCorrectionTool_IsoLoose map=UseEgammaRecommended reco_key= ID_key=TightLLH iso_key=Tight_VarRad trigger_key=data_type=1 correlation_model=TOTAL etaBinning= etBinning=
+top::EgammaCPTools       INFO     Adding IDKey      : Tight
+top::EgammaCPTools       INFO     Adding IsoKey     : Tight_VarRad
+top::EgammaCPTools       INFO    Requested Electrons SF tool for TOTAL correlation model
+top::MuonCPTools         INFO    top::MuonCPTools initialize...
+MuonSelectionTool        INFO    Initialising...
+MuonSelectionTool        INFO    MuonSelectionTool will assume run3 geometry is used
+MuonSelectionTool        INFO    Maximum eta: 2.5
+MuonSelectionTool        INFO    Muon quality: 1
+MuonSelectionTool        INFO    You have opted to select only 3-station muons in the high-pT selection! Please feed 'HighPt3Layers' to the 'WorkingPoint' property to retrieve the appropriate scale-factors
+MuonSelectionTool        INFO    Initialising tight working point histograms...
+MuonSelectionTool        INFO    Reading muon tight working point histograms from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/PreRec2016_2016-04-13/muonSelection_tightWPHisto.root
+MuonSelectionTool        INFO    Successfully read tight working point histogram: tightWP_lowPt_rhoCuts
+MuonSelectionTool        INFO    Successfully read tight working point histogram: tightWP_lowPt_qOverPCuts
+MuonSelectionTool        INFO    Successfully read tight working point histogram: tightWP_mediumPt_rhoCuts
+MuonSelectionTool        INFO    Successfully read tight working point histogram: tightWP_highPt_rhoCuts
+MuonSelectionTool        INFO    Reading bad muon veto cut functions from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root
+MuonSelectionToolLoose   INFO    Initialising...
+MuonSelectionToolLoose   INFO    MuonSelectionTool will assume run3 geometry is used
+MuonSelectionToolLoose   INFO    Maximum eta: 2.5
+MuonSelectionToolLoose   INFO    Muon quality: 1
+MuonSelectionToolLoose   INFO    You have opted to select only 3-station muons in the high-pT selection! Please feed 'HighPt3Layers' to the 'WorkingPoint' property to retrieve the appropriate scale-factors
+MuonSelectionToolLoose   INFO    Initialising tight working point histograms...
+MuonSelectionToolLoose   INFO    Reading muon tight working point histograms from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/PreRec2016_2016-04-13/muonSelection_tightWPHisto.root
+MuonSelectionToolLoose   INFO    Successfully read tight working point histogram: tightWP_lowPt_rhoCuts
+MuonSelectionToolLoose   INFO    Successfully read tight working point histogram: tightWP_lowPt_qOverPCuts
+MuonSelectionToolLoose   INFO    Successfully read tight working point histogram: tightWP_mediumPt_rhoCuts
+MuonSelectionToolLoose   INFO    Successfully read tight working point histogram: tightWP_highPt_rhoCuts
+MuonSelectionToolLoose   INFO    Reading bad muon veto cut functions from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root
+MuonSelectionToolVeryL...INFO    Initialising...
+MuonSelectionToolVeryL...INFO    MuonSelectionTool will assume run3 geometry is used
+MuonSelectionToolVeryL...INFO    Maximum eta: 2.5
+MuonSelectionToolVeryL...INFO    Muon quality: 2
+MuonSelectionToolVeryL...INFO    You have opted to select only 3-station muons in the high-pT selection! Please feed 'HighPt3Layers' to the 'WorkingPoint' property to retrieve the appropriate scale-factors
+MuonSelectionToolVeryL...INFO    Initialising tight working point histograms...
+MuonSelectionToolVeryL...INFO    Reading muon tight working point histograms from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/PreRec2016_2016-04-13/muonSelection_tightWPHisto.root
+MuonSelectionToolVeryL...INFO    Successfully read tight working point histogram: tightWP_lowPt_rhoCuts
+MuonSelectionToolVeryL...INFO    Successfully read tight working point histogram: tightWP_lowPt_qOverPCuts
+MuonSelectionToolVeryL...INFO    Successfully read tight working point histogram: tightWP_mediumPt_rhoCuts
+MuonSelectionToolVeryL...INFO    Successfully read tight working point histogram: tightWP_highPt_rhoCuts
+MuonSelectionToolVeryL...INFO    Reading bad muon veto cut functions from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root
+MuonMomentumCalibratio...INFO    Initialising...
+MuonMomentumCalibratio...INFO    Data will be corrected for sagitta bias with ID+MS calibration
+MuonMomentumCalibratio...INFO    Please make sure you are using the correct muon calibration. Please refer to the twiki MCPAnalysisGuidelinesR22
+ToolSvc.MCaST_Own_MST    INFO    Initialising...
+ToolSvc.MCaST_Own_MST    INFO    MuonSelectionTool will assume run3 geometry is used
+ToolSvc.MCaST_Own_MST    INFO    Maximum eta: 2.7
+ToolSvc.MCaST_Own_MST    INFO    Muon quality: 1
+ToolSvc.MCaST_Own_MST    INFO    Initialising tight working point histograms...
+ToolSvc.MCaST_Own_MST    INFO    Reading muon tight working point histograms from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/PreRec2016_2016-04-13/muonSelection_tightWPHisto.root
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_lowPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_lowPt_qOverPCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_mediumPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Successfully read tight working point histogram: tightWP_highPt_rhoCuts
+ToolSvc.MCaST_Own_MST    INFO    Reading bad muon veto cut functions from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/180620_BMVmimicCutFunctions/BMVmimicCutFunctions.root
+ToolSvc.MCaST_Sagitta    INFO    Initializing MuonCalibIntSagittaTool
+ToolSvc.MCaST_ScaleSmear INFO    Initializing MuonCalibIntScaleSmearTool
+MuonTriggerScaleFactor...INFO    MuonQuality = 'Medium'
+MuonTriggerScaleFactor...INFO    Binning = 'fine'
+MuonTriggerScaleFactor...INFO    CalibrationRelease = '230222_Winter_r22'
+MuonTriggerScaleFactor...INFO    CustomInputFolder = ''
+MuonTriggerScaleFactor...INFO    AllowZeroSF = 0
+MuonTriggerScaleFactor...INFO    experimental = 0
+MuonTriggerScaleFactor...INFO    useRel27 = 0
+MuonTriggerScaleFactor...INFO    MuonTriggerScaleFactors::initialize
+MuonTriggerScaleFactor...INFO    MuonQuality = 'Medium'
+MuonTriggerScaleFactor...INFO    Binning = 'fine'
+MuonTriggerScaleFactor...INFO    CalibrationRelease = '230222_Winter_r22'
+MuonTriggerScaleFactor...INFO    CustomInputFolder = ''
+MuonTriggerScaleFactor...INFO    AllowZeroSF = 0
+MuonTriggerScaleFactor...INFO    experimental = 0
+MuonTriggerScaleFactor...INFO    useRel27 = 0
+MuonTriggerScaleFactor...INFO    MuonTriggerScaleFactors::initialize
+MuonEfficiencyScaleFac...INFO    Efficiency type is = RECO
+MuonEfficiencyScaleFac...INFO    JPsi based low pt SF will start to rock below 10 GeV!
+MuonEfficiencyScaleFac...INFO    Trying to initialize, with working point Medium, using calibration release 230309_Preliminary_r22run3
+MuonEfficiencyScaleFac...INFO    Successfully initialized! 
+MuonEfficiencyScaleFac...INFO    Efficiency type is = RECO
+MuonEfficiencyScaleFac...INFO    JPsi based low pt SF will start to rock below 10 GeV!
+MuonEfficiencyScaleFac...INFO    Trying to initialize, with working point Medium, using calibration release 230309_Preliminary_r22run3
+MuonEfficiencyScaleFac...INFO    Successfully initialized! 
+MuonEfficiencyScaleFac...INFO    Efficiency type is = TTVA
+MuonEfficiencyScaleFac...INFO    Trying to initialize, with working point TTVA, using calibration release 230309_Preliminary_r22run3
+MuonEfficiencyScaleFac...INFO    Successfully initialized! 
+top::TauCPTools          INFO    top::TauCPTools initialize...
+top::TauCPTools          INFO    top::TauCPTools: no need to initialise anything since not using taus
+top::FlavorTaggingCPToolsINFO    top::FlavorTaggingCPTools initialize...
+BTaggingEfficiencyTool...INFO     Hello BTaggingEfficiencyTool user... initializing
+BTaggingEfficiencyTool...INFO     TaggerName = DL1dv01
+BTaggingEfficiencyTool...INFO     OP = FixedCutBEff_77
+BTaggingEfficiencyTool...INFO     m_systStrategy is SFEigen
+BTaggingEfficiencyTool...INFO     b-jet     SF/eff calibration = default / default;410558;410470;410250;default;410464;411233;421152;700122;600666
+BTaggingEfficiencyTool...INFO     c-jet     SF/eff calibration = default / default;410558;410470;410250;default;410464;411233;421152;700122;600666
+BTaggingEfficiencyTool...INFO     tau-jet   SF/eff calibration = default / default;410558;410470;410250;default;410464;411233;421152;700122;600666
+BTaggingEfficiencyTool...INFO     light-jet SF/eff calibration = default / default;410558;410470;410250;default;410464;411233;421152;700122;600666
+BTaggingEfficiencyTool...INFO     JetAuthor = AntiKt4EMPFlowJets
+=== CalibrationDataInterfaceROOT::CalibrationDataInterfaceROOT ===
+ taggerName           : DL1dv01
+ Systematic strategy : SFEigen
+ Efficiency file name : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/xAODBTaggingEfficiency/13TeV/2022-22-13TeV-MC20-CDI-2022-07-28_v1.root
+ SF         file name : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/xAODBTaggingEfficiency/13TeV/2022-22-13TeV-MC20-CDI-2022-07-28_v1.root
+
+ CDI file build number: Custom
+
+ List of uncertainties to exclude:
+	T:	extrapolation from charm
+
+======= end of CalibrationDataInterfaceROOT instantiation ========
+BTaggingEfficiencyTool...INFO    BTEffTool->initialize : setMapIndex(Light)
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex :  container name is default_Eff
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/Light/default_Eff (with comment: 'default efficiencies from sample PowhegPythia8' and hadronisation setting 'Pythia8EvtGen')
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/Light/default_SF (with comment: 'negative_tag_Zjet+extrap[Run2MCcalib]' and hadronisation setting 'Pythia8EvtGen')
+ CDEV Constructor : info /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/xAODBTaggingEfficiency/13TeV/2022-22-13TeV-MC20-CDI-2022-07-28_v1.root DL1dv01 FixedCutBEff_77 AntiKt4EMPFlowJets
+CalibrationDataEigenVariations: Removing 297 eigenvector variations leading to sub-tolerance effects, retaining 3 variations
+ The total variance is 75 and the reduction captured 100% of this.
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex : container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/Light/default_SF already cached! 
+BTaggingEfficiencyTool...INFO    BTEffTool->initialize : setMapIndex(C)
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex :  container name is default_Eff
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/C/default_Eff (with comment: 'default efficiencies from sample PowhegPythia8' and hadronisation setting 'Pythia8EvtGen')
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/C/default_SF (with comment: 'ttbarC+extrap[Run2MCcalib_ttC]' and hadronisation setting 'Pythia8EvtGen')
+ CDEV Constructor : info /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/xAODBTaggingEfficiency/13TeV/2022-22-13TeV-MC20-CDI-2022-07-28_v1.root DL1dv01 FixedCutBEff_77 AntiKt4EMPFlowJets
+CalibrationDataEigenVariations: Removing 298 eigenvector variations leading to sub-tolerance effects, retaining 2 variations
+ The total variance is 12 and the reduction captured 100% of this.
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex : container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/C/default_SF already cached! 
+BTaggingEfficiencyTool...INFO    BTEffTool->initialize : setMapIndex(B)
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex :  container name is default_Eff
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/B/default_Eff (with comment: 'default efficiencies from sample PowhegPythia8' and hadronisation setting 'Pythia8EvtGen')
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/B/default_SF (with comment: 'ttbar_PDF+extrap[Run2MCcalib]' and hadronisation setting 'Pythia8EvtGen')
+ CDEV Constructor : info /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/xAODBTaggingEfficiency/13TeV/2022-22-13TeV-MC20-CDI-2022-07-28_v1.root DL1dv01 FixedCutBEff_77 AntiKt4EMPFlowJets
+CalibrationDataEigenVariations: Removing 298 eigenvector variations leading to sub-tolerance effects, retaining 2 variations
+ The total variance is 3 and the reduction captured 100% of this.
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex : container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/B/default_SF already cached! 
+BTaggingEfficiencyTool...INFO    BTEffTool->initialize : setMapIndex(T)
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex :  container name is default_Eff
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/T/default_Eff (with comment: 'default efficiencies from sample PowhegPythia8' and hadronisation setting 'Pythia8EvtGen')
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/T/default_SF (with comment: 'ttbarC+addSys[newsys]+extrap[Run2MCcalib_ttC]' and hadronisation setting 'Pythia8EvtGen')
+ CDEV Constructor : info /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/xAODBTaggingEfficiency/13TeV/2022-22-13TeV-MC20-CDI-2022-07-28_v1.root DL1dv01 FixedCutBEff_77 AntiKt4EMPFlowJets
+CalibrationDataEigenVariations: Removing 298 eigenvector variations leading to sub-tolerance effects, retaining 2 variations
+ The total variance is 26.52 and the reduction captured 100% of this.
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex : container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/T/default_SF already cached! 
+BTaggingEfficiencyTool...INFO    Using systematics model SFEigen
+top::BoostedTaggingCPT...INFO    top::BoostedTaggingCPTools initialize...
+top::BoostedTaggingCPT...INFO    top::BoostedTaggingCPTools: no need to initialise anything since not using large-R jets
+top::JetMETCPTools       INFO    top::JetMETCPTools initialize...
+top::JetMETCPTools       INFO    Configuration JES tools with 
+top::JetMETCPTools       INFO    JES Calibration Configuration : PreRec_R22_PFlow_ResPU_EtaJES_GSC_February23_230215.config
+top::JetMETCPTools       INFO    JES Calibration Sequence      : JetArea_Residual_EtaJES_GSC
+JetCalibrationTool       INFO    Initializing JetCalibrationTool to calibrate AntiKt4EMPFlowjets
+JetCalibrationTool       INFO    Reading global JES settings from: PreRec_R22_PFlow_ResPU_EtaJES_GSC_February23_230215.config
+JetCalibrationTool       INFO    resolved in: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetCalibTools/CalibArea-00-04-82/CalibrationConfigs/PreRec_R22_PFlow_ResPU_EtaJES_GSC_February23_230215.config
+JetCalibrationTool_PileupINFO    Initializing pileup correction.
+JetCalibrationTool_PileupINFO    JetPileupCorrection: Starting scale: JetConstitScaleMomentum
+JetCalibrationTool_PileupINFO    Jet area pile up correction will be applied.
+JetCalibrationTool_Pil...INFO    Reading residual jet-area pile-up correction factors from: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetCalibTools/CalibArea-00-04-82/CalibrationFactors/PreRec22_MC20j_AntiKt4EMPFlow_ResidualPileUp_December22.config
+JetCalibrationTool_Pil...INFO    Description: MC20 residual mu- and N_{PV}-dependent jet pileup corrections for R=0.4 AntiKt4EMPFlow
+JetCalibrationTool_EtaJESINFO    Initializing JES correction.
+JetCalibrationTool_EtaJESINFO    Reading absolute calibration factors from: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetCalibTools/CalibArea-00-04-82/CalibrationFactors/PreRec22_MC20j_AntiKt4EMPFlow_EtaJES_pspline_December22_constants.config
+JetCalibrationTool_EtaJESINFO    Description: MCJES derived in October 2022 (13-10-22) for MC20a+d+e
+JetCalibrationTool_GSC   INFO    Initializing the Global Sequential Calibration tool
+JetCalibrationTool_GSC   INFO    GSC Tool has been initialized with binning and eta fit factors from: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetCalibTools/CalibArea-00-04-82/CalibrationFactors/PreRec22_MC20j_AntiKt4EMPFlow_GSC_February23_CF_Tile0_EM3_Ntrk_Wtrk_Nseg.root
+JetCleaningToolLooseBad  INFO    Configured with cut level LooseBad
+JetCleaningToolTightBad  INFO    Configured with cut level TightBad
+JetEventCleaningToolLo...INFO    Event cleaning tool configured with cut level LooseBad
+JetEventCleaningToolTi...INFO    Event cleaning tool configured with cut level TightBad
+top::JetMETCPTools       INFO    JER PseudoData option provided - Treating MC as if it is data for JER uncertainty
+JetUncertaintiesTool     INFO    Preparing to initialize the JetUncertaintiesTool named JetUncertaintiesTool
+JetUncertaintiesTool     INFO    ================================================
+JetUncertaintiesTool     INFO      Initializing the JetUncertaintiesTool named JetUncertaintiesTool
+JetUncertaintiesTool     INFO      Path is: ""
+JetUncertaintiesTool     INFO      CalibArea is: "CalibArea-08"
+JetUncertaintiesTool     INFO      IsData is: "false"
+JetUncertaintiesTool     INFO      Configuration file: "rel22/Summer2023_PreRec/R4_CategoryReduction_FullJER.config"
+JetUncertaintiesTool     INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Summer2023_PreRec/R4_CategoryReduction_FullJER.config
+JetUncertaintiesTool     INFO      Uncertainty release: rel22_Summer2023_PreRec
+JetUncertaintiesTool     INFO      Jet definition: AntiKt4EMPFlow
+JetUncertaintiesTool     INFO      MC type: MC21
+JetUncertaintiesTool     INFO      UncertaintyFile: "rel22/Summer2023_PreRec/R4_AllComponents.root"
+JetUncertaintiesTool     INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Summer2023_PreRec/R4_AllComponents.root
+JetUncertaintiesTool     INFO      AnalysisFile: "analysisInputs/UnknownFlavourComp.root"
+JetUncertaintiesTool     INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/analysisInputs/UnknownFlavourComp.root
+JetUncertaintiesTool_RH  INFO      NominalFourVecResData: "JER_Nominal_data,PtAbsEta,OnlyX"
+JetUncertaintiesTool_RH  INFO      NominalFourVecResMC: "JER_Nominal_MC16,PtAbsEta,OnlyX"
+JetUncertaintiesTool_RH  INFO      ResolutionSmearOnlyMC: "false"
+JetUncertaintiesTool     INFO    
+JetUncertaintiesTool     INFO           JES uncert. comp.                        : Description
+JetUncertaintiesTool     INFO           -----------------                         ------------
+JetUncertaintiesTool     INFO        1. JET_EtaIntercalibration_Modelling        : Eta intercalibration: MC generator modelling uncertainty
+JetUncertaintiesTool     INFO        2. JET_EtaIntercalibration_TotalStat        : Eta intercalibration: statistical uncertainty
+JetUncertaintiesTool     INFO        3. JET_Pileup_OffsetMu                      : Pileup: Offset, mu term
+JetUncertaintiesTool     INFO        4. JET_Pileup_OffsetNPV                     : Pileup: Offset, NPV term
+JetUncertaintiesTool     INFO        5. JET_Pileup_PtTerm                        : Pileup: Offset, pT term
+JetUncertaintiesTool     INFO        6. JET_Pileup_RhoTopology                   : Rho topology uncertainty (jet areas)
+JetUncertaintiesTool     INFO        7. JET_Flavor_Composition                   : Flavor composition uncertainty
+JetUncertaintiesTool     INFO        8. JET_Flavor_Response                      : Flavor response uncertainty (dominated by gluon response)
+JetUncertaintiesTool     INFO        9. JET_PunchThrough_MC16                    : Punch-through correction uncertainty
+JetUncertaintiesTool     INFO       10. JET_EffectiveNP_Statistical1             : Effective JES Uncertainty Statistical Component 1
+JetUncertaintiesTool     INFO       11. JET_EffectiveNP_Statistical2             : Effective JES Uncertainty Statistical Component 2
+JetUncertaintiesTool     INFO       12. JET_EffectiveNP_Statistical3             : Effective JES Uncertainty Statistical Component 3
+JetUncertaintiesTool     INFO       13. JET_EffectiveNP_Statistical4             : Effective JES Uncertainty Statistical Component 4
+JetUncertaintiesTool     INFO       14. JET_EffectiveNP_Statistical5             : Effective JES Uncertainty Statistical Component 5
+JetUncertaintiesTool     INFO       15. JET_EffectiveNP_Statistical6             : Effective JES Uncertainty Statistical Component 6
+JetUncertaintiesTool     INFO       16. JET_EffectiveNP_Modelling1               : Effective JES Uncertainty Modelling Component 1
+JetUncertaintiesTool     INFO       17. JET_EffectiveNP_Modelling2               : Effective JES Uncertainty Modelling Component 2
+JetUncertaintiesTool     INFO       18. JET_EffectiveNP_Modelling3               : Effective JES Uncertainty Modelling Component 3
+JetUncertaintiesTool     INFO       19. JET_EffectiveNP_Modelling4               : Effective JES Uncertainty Modelling Component 4
+JetUncertaintiesTool     INFO       20. JET_EffectiveNP_Detector1                : Effective JES Uncertainty Detector Component 1
+JetUncertaintiesTool     INFO       21. JET_EffectiveNP_Detector2                : Effective JES Uncertainty Detector Component 2
+JetUncertaintiesTool     INFO       22. JET_EffectiveNP_Mixed1                   : Effective JES Uncertainty Mixed Component 1
+JetUncertaintiesTool     INFO       23. JET_EffectiveNP_Mixed2                   : Effective JES Uncertainty Mixed Component 2
+JetUncertaintiesTool     INFO       24. JET_EffectiveNP_Mixed3                   : Effective JES Uncertainty Mixed Component 3
+JetUncertaintiesTool     INFO       25. JET_EtaIntercalibration_NonClosure_PreRec : Eta intercalibration non-closure uncertainty wrt rel22, early Run3
+JetUncertaintiesTool     INFO       26. JET_SingleParticle_HighPt                : High pT term (r20.7 version)
+JetUncertaintiesTool     INFO       27. JET_BJES_Response                        : JES uncertainty for b jets
+JetUncertaintiesTool     INFO       28. JET_InSitu_NonClosure_PreRec             : InSitu non-closure uncertainty derived in Z+jet rel22, early Run3 
+JetUncertaintiesTool     INFO       29. JET_JESUnc_mc20vsmc21_MC21_PreRec        : Pre recommendation systematics for R22. Comparison of mc20 and mc21
+JetUncertaintiesTool     INFO       30. JET_JESUnc_Noise_PreRec                  : Pre recommendation systematics for R22. Comparison of different noise threshold setting
+JetUncertaintiesTool     INFO       31. JET_JESUnc_VertexingAlg_PreRec           : Pre recommendation systematics for R22. Comparisong of different Vertexing Algorithms
+JetUncertaintiesTool     INFO       32. JET_JER_DataVsMC_MC16                    : NP covering when JER(data) < JER(MC)
+JetUncertaintiesTool     INFO       33. JET_JER_EffectiveNP_1                    : Effective JER Uncertainty Component 1
+JetUncertaintiesTool     INFO       34. JET_JER_EffectiveNP_2                    : Effective JER Uncertainty Component 2
+JetUncertaintiesTool     INFO       35. JET_JER_EffectiveNP_3                    : Effective JER Uncertainty Component 3
+JetUncertaintiesTool     INFO       36. JET_JER_EffectiveNP_4                    : Effective JER Uncertainty Component 4
+JetUncertaintiesTool     INFO       37. JET_JER_EffectiveNP_5                    : Effective JER Uncertainty Component 5
+JetUncertaintiesTool     INFO       38. JET_JER_EffectiveNP_6                    : Effective JER Uncertainty Component 6
+JetUncertaintiesTool     INFO       39. JET_JER_EffectiveNP_7                    : Effective JER Uncertainty Component 7
+JetUncertaintiesTool     INFO       40. JET_JER_EffectiveNP_8                    : Effective JER Uncertainty Component 8
+JetUncertaintiesTool     INFO       41. JET_JER_EffectiveNP_9                    : Effective JER Uncertainty Component 9
+JetUncertaintiesTool     INFO       42. JET_JER_EffectiveNP_10                   : Effective JER Uncertainty Component 10
+JetUncertaintiesTool     INFO       43. JET_JER_EffectiveNP_11                   : Effective JER Uncertainty Component 11
+JetUncertaintiesTool     INFO       44. JET_JER_EffectiveNP_12restTerm           : Effective JER Uncertainty Component 12
+JetUncertaintiesTool     INFO       45. JET_JERUnc_mc20vsmc21_MC21_PreRec        : Pre recommendation systematics for R22. Comparison of mc20 and mc21
+JetUncertaintiesTool     INFO       46. JET_JERUnc_Noise_PreRec                  : Pre recommendation systematics for JER R22. Comparison of different noise threshold setting
+JetUncertaintiesTool     INFO       Found and read in 55 individual components into 46 component groups of which 46 are recommended
+JetUncertaintiesTool     INFO    ================================================
+JetUncertaintiesToolPs...INFO    Preparing to initialize the JetUncertaintiesTool named JetUncertaintiesToolPseudoData
+JetUncertaintiesToolPs...INFO    ================================================
+JetUncertaintiesToolPs...INFO      Initializing the JetUncertaintiesTool named JetUncertaintiesToolPseudoData
+JetUncertaintiesToolPs...INFO      Path is: ""
+JetUncertaintiesToolPs...INFO      CalibArea is: "CalibArea-08"
+JetUncertaintiesToolPs...INFO      IsData is: "true"
+JetUncertaintiesToolPs...INFO      Configuration file: "rel22/Summer2023_PreRec/R4_CategoryReduction_FullJER.config"
+JetUncertaintiesToolPs...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Summer2023_PreRec/R4_CategoryReduction_FullJER.config
+JetUncertaintiesToolPs...INFO      Uncertainty release: rel22_Summer2023_PreRec
+JetUncertaintiesToolPs...INFO      Jet definition: AntiKt4EMPFlow
+JetUncertaintiesToolPs...INFO      MC type: MC21
+JetUncertaintiesToolPs...INFO      UncertaintyFile: "rel22/Summer2023_PreRec/R4_AllComponents.root"
+JetUncertaintiesToolPs...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/rel22/Summer2023_PreRec/R4_AllComponents.root
+JetUncertaintiesToolPs...INFO      AnalysisFile: "analysisInputs/UnknownFlavourComp.root"
+JetUncertaintiesToolPs...INFO        Location: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetUncertainties/CalibArea-08/analysisInputs/UnknownFlavourComp.root
+JetUncertaintiesToolPs...INFO      NominalFourVecResData: "JER_Nominal_data,PtAbsEta,OnlyX"
+JetUncertaintiesToolPs...INFO      NominalFourVecResMC: "JER_Nominal_MC16,PtAbsEta,OnlyX"
+JetUncertaintiesToolPs...INFO      ResolutionSmearOnlyMC: "false"
+JetUncertaintiesToolPs...INFO    
+JetUncertaintiesToolPs...INFO           JES uncert. comp.                        : Description
+JetUncertaintiesToolPs...INFO           -----------------                         ------------
+JetUncertaintiesToolPs...INFO        1. JET_EtaIntercalibration_Modelling        : Eta intercalibration: MC generator modelling uncertainty
+JetUncertaintiesToolPs...INFO        2. JET_EtaIntercalibration_TotalStat        : Eta intercalibration: statistical uncertainty
+JetUncertaintiesToolPs...INFO        3. JET_Pileup_OffsetMu                      : Pileup: Offset, mu term
+JetUncertaintiesToolPs...INFO        4. JET_Pileup_OffsetNPV                     : Pileup: Offset, NPV term
+JetUncertaintiesToolPs...INFO        5. JET_Pileup_PtTerm                        : Pileup: Offset, pT term
+JetUncertaintiesToolPs...INFO        6. JET_Pileup_RhoTopology                   : Rho topology uncertainty (jet areas)
+JetUncertaintiesToolPs...INFO        7. JET_Flavor_Composition                   : Flavor composition uncertainty
+JetUncertaintiesToolPs...INFO        8. JET_Flavor_Response                      : Flavor response uncertainty (dominated by gluon response)
+JetUncertaintiesToolPs...INFO        9. JET_PunchThrough_MC16                    : Punch-through correction uncertainty
+JetUncertaintiesToolPs...INFO       10. JET_EffectiveNP_Statistical1             : Effective JES Uncertainty Statistical Component 1
+JetUncertaintiesToolPs...INFO       11. JET_EffectiveNP_Statistical2             : Effective JES Uncertainty Statistical Component 2
+JetUncertaintiesToolPs...INFO       12. JET_EffectiveNP_Statistical3             : Effective JES Uncertainty Statistical Component 3
+JetUncertaintiesToolPs...INFO       13. JET_EffectiveNP_Statistical4             : Effective JES Uncertainty Statistical Component 4
+JetUncertaintiesToolPs...INFO       14. JET_EffectiveNP_Statistical5             : Effective JES Uncertainty Statistical Component 5
+JetUncertaintiesToolPs...INFO       15. JET_EffectiveNP_Statistical6             : Effective JES Uncertainty Statistical Component 6
+JetUncertaintiesToolPs...INFO       16. JET_EffectiveNP_Modelling1               : Effective JES Uncertainty Modelling Component 1
+JetUncertaintiesToolPs...INFO       17. JET_EffectiveNP_Modelling2               : Effective JES Uncertainty Modelling Component 2
+JetUncertaintiesToolPs...INFO       18. JET_EffectiveNP_Modelling3               : Effective JES Uncertainty Modelling Component 3
+JetUncertaintiesToolPs...INFO       19. JET_EffectiveNP_Modelling4               : Effective JES Uncertainty Modelling Component 4
+JetUncertaintiesToolPs...INFO       20. JET_EffectiveNP_Detector1                : Effective JES Uncertainty Detector Component 1
+JetUncertaintiesToolPs...INFO       21. JET_EffectiveNP_Detector2                : Effective JES Uncertainty Detector Component 2
+JetUncertaintiesToolPs...INFO       22. JET_EffectiveNP_Mixed1                   : Effective JES Uncertainty Mixed Component 1
+JetUncertaintiesToolPs...INFO       23. JET_EffectiveNP_Mixed2                   : Effective JES Uncertainty Mixed Component 2
+JetUncertaintiesToolPs...INFO       24. JET_EffectiveNP_Mixed3                   : Effective JES Uncertainty Mixed Component 3
+JetUncertaintiesToolPs...INFO       25. JET_EtaIntercalibration_NonClosure_PreRec : Eta intercalibration non-closure uncertainty wrt rel22, early Run3
+JetUncertaintiesToolPs...INFO       26. JET_SingleParticle_HighPt                : High pT term (r20.7 version)
+JetUncertaintiesToolPs...INFO       27. JET_BJES_Response                        : JES uncertainty for b jets
+JetUncertaintiesToolPs...INFO       28. JET_InSitu_NonClosure_PreRec             : InSitu non-closure uncertainty derived in Z+jet rel22, early Run3 
+JetUncertaintiesToolPs...INFO       29. JET_JESUnc_mc20vsmc21_MC21_PreRec        : Pre recommendation systematics for R22. Comparison of mc20 and mc21
+JetUncertaintiesToolPs...INFO       30. JET_JESUnc_Noise_PreRec                  : Pre recommendation systematics for R22. Comparison of different noise threshold setting
+JetUncertaintiesToolPs...INFO       31. JET_JESUnc_VertexingAlg_PreRec           : Pre recommendation systematics for R22. Comparisong of different Vertexing Algorithms
+JetUncertaintiesToolPs...INFO       32. JET_JER_DataVsMC_MC16                    : NP covering when JER(data) < JER(MC)
+JetUncertaintiesToolPs...INFO       33. JET_JER_EffectiveNP_1                    : Effective JER Uncertainty Component 1
+JetUncertaintiesToolPs...INFO       34. JET_JER_EffectiveNP_2                    : Effective JER Uncertainty Component 2
+JetUncertaintiesToolPs...INFO       35. JET_JER_EffectiveNP_3                    : Effective JER Uncertainty Component 3
+JetUncertaintiesToolPs...INFO       36. JET_JER_EffectiveNP_4                    : Effective JER Uncertainty Component 4
+JetUncertaintiesToolPs...INFO       37. JET_JER_EffectiveNP_5                    : Effective JER Uncertainty Component 5
+JetUncertaintiesToolPs...INFO       38. JET_JER_EffectiveNP_6                    : Effective JER Uncertainty Component 6
+JetUncertaintiesToolPs...INFO       39. JET_JER_EffectiveNP_7                    : Effective JER Uncertainty Component 7
+JetUncertaintiesToolPs...INFO       40. JET_JER_EffectiveNP_8                    : Effective JER Uncertainty Component 8
+JetUncertaintiesToolPs...INFO       41. JET_JER_EffectiveNP_9                    : Effective JER Uncertainty Component 9
+JetUncertaintiesToolPs...INFO       42. JET_JER_EffectiveNP_10                   : Effective JER Uncertainty Component 10
+JetUncertaintiesToolPs...INFO       43. JET_JER_EffectiveNP_11                   : Effective JER Uncertainty Component 11
+JetUncertaintiesToolPs...INFO       44. JET_JER_EffectiveNP_12restTerm           : Effective JER Uncertainty Component 12
+JetUncertaintiesToolPs...INFO       45. JET_JERUnc_mc20vsmc21_MC21_PreRec        : Pre recommendation systematics for R22. Comparison of mc20 and mc21
+JetUncertaintiesToolPs...INFO       46. JET_JERUnc_Noise_PreRec                  : Pre recommendation systematics for JER R22. Comparison of different noise threshold setting
+JetUncertaintiesToolPs...INFO       Found and read in 55 individual components into 46 component groups of which 46 are recommended
+JetUncertaintiesToolPs...INFO    ================================================
+JetJvtEfficiencyTool     INFO    Configuring JetJvtEfficiency tool for NNJvt algorithm.
+JetJvtEfficiencyTool     INFO    NNJvtTool is empty! Initializing default tool 
+JetJvtEfficiencyTool.N...INFO      Reading JVT NN file from:
+    NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+
+JetJvtEfficiencyTool.N...INFO                         resolved in  :
+    /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetPileupTag/NNJvt/2022-03-22/NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+
+
+JetJvtEfficiencyTool.N...INFO    
+ Reading JVT likelihood histogram from:
+    /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetPileupTag/NNJvt/2022-03-22/NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+
+
+JetJvtEfficiencyTool.N...INFO      Reading JVT NN cut file from:
+    NNJVT.Cuts.FixedEffPt.Offline.Nonprompt_All_MaxW.json
+
+JetJvtEfficiencyTool.N...INFO                         resolved in  :
+    /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetPileupTag/NNJvt/2022-03-22/NNJVT.Cuts.FixedEffPt.Offline.Nonprompt_All_MaxW.json
+
+
+JetJvtEfficiencyTool     INFO    Using dummy SFs of 1 +/ 10% for NNJvt.
+met::METMaker            INFO    Initializing met::METMaker...
+met::METMaker            INFO    Use jet selection criterion: Tight PFlow: 1
+met::METMaker.JvtTool    INFO    Configuring JetJvtEfficiency tool for NNJvt algorithm.
+met::METMaker.JvtTool    INFO    NNJvtTool is empty! Initializing default tool 
+met::METMaker.JvtTool....INFO      Reading JVT NN file from:
+    NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+
+met::METMaker.JvtTool....INFO                         resolved in  :
+    /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetPileupTag/NNJvt/2022-03-22/NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+
+
+met::METMaker.JvtTool....INFO    
+ Reading JVT likelihood histogram from:
+    /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetPileupTag/NNJvt/2022-03-22/NNJVT.Network.graph.Offline.Nonprompt_All_MaxWeight.json
+
+
+met::METMaker.JvtTool....INFO      Reading JVT NN cut file from:
+    NNJVT.Cuts.FixedEffPt.Offline.Nonprompt_All_MaxW.json
+
+met::METMaker.JvtTool....INFO                         resolved in  :
+    /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/JetPileupTag/NNJvt/2022-03-22/NNJVT.Cuts.FixedEffPt.Offline.Nonprompt_All_MaxW.json
+
+
+met::METMaker.JvtTool    INFO    Using dummy SFs of 1 +/ 10% for NNJvt.
+met::METMaker            INFO    Suppressing warnings of objects missing in METAssociationMap for objects with pT < 7 GeV.
+met::METSystematicsTool  INFO    Searching for configFile: TrackSoftTerms-pflow.config
+met::METSystematicsTool  INFO    Configuring from file : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/TrackSoftTerms-pflow.config
+met::METSystematicsTool  INFO    Will read histograms from : METUtilities/R22_PreRecs/R22_PreRecs_EMPFlow_TSTSystematics.root
+met::METSystematicsTool  INFO    Extracted histogram path : /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/METUtilities/R22_PreRecs/R22_PreRecs_EMPFlow_TSTSystematics.root
+met::METSystematicsTool  INFO    AffectingSystematics are:
+met::METSystematicsTool  INFO    MET_SoftTrk_ResoCorr
+met::METSystematicsTool  INFO    MET_SoftTrk_ResoPara
+met::METSystematicsTool  INFO    MET_SoftTrk_ResoPerp
+met::METSystematicsTool  INFO    MET_SoftTrk_Scale__1down
+met::METSystematicsTool  INFO    MET_SoftTrk_Scale__1up
+top::IsolationCPTools    INFO    top::IsolationCPTools initialize...
+IsolationCorrectionTool  INFO    in initialize of IsolationCorrectionTool...
+IsolationCorrectionTool  INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v5/isolation_ptcorrections_rel20_2.root
+IsolationCorrectionTool  INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v3/isolation_ddcorrection_shift.root
+IsolationCorrectionTool  INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v1/isolation_ddcorrection_smearing.root
+IsolationCorrectionTool  INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v6/zetas.root
+IsolationCorrectionTool  INFO     Path found = /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationCorrections/v6/zetas_correction.root
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_ElectronWP_HighPtCaloOnly
+IsolationTool_Electron...INFO    Initialising...
+IsolationTool_Electron...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_Electron...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_ElectronWP_Loose_VarRad
+IsolationTool_Electron...INFO    Initialising...
+IsolationTool_Electron...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_Electron...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_ElectronWP_TightTrackOnly_FixedRad
+IsolationTool_Electron...INFO    Initialising...
+IsolationTool_Electron...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_Electron...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_ElectronWP_TightTrackOnly_VarRad
+IsolationTool_Electron...INFO    Initialising...
+IsolationTool_Electron...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_Electron...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_ElectronWP_Tight_VarRad
+IsolationTool_Electron...INFO    Initialising...
+IsolationTool_Electron...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_Electron...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_MuonWP_Loose_VarRad
+IsolationTool_MuonWP_L...INFO    Initialising...
+IsolationTool_MuonWP_L...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_MuonWP_L...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_MuonWP_PflowLoose_VarRad
+IsolationTool_MuonWP_P...INFO    Initialising...
+IsolationTool_MuonWP_P...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_MuonWP_P...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_MuonWP_PflowTight_VarRad
+IsolationTool_MuonWP_P...INFO    Initialising...
+IsolationTool_MuonWP_P...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_MuonWP_P...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_MuonWP_Tight_VarRad
+IsolationTool_MuonWP_T...INFO    Initialising...
+IsolationTool_MuonWP_T...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_MuonWP_T...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_PhotonWP_FixedCutLoose
+IsolationTool_PhotonWP...INFO    Initialising...
+IsolationTool_PhotonWP...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_PhotonWP...INFO    VersionInfo:2015_Jun_23_v1a
+top::IsolationCPTools    INFO    Initializing isolation tool: IsolationTool_PhotonWP_FixedCutTight
+IsolationTool_PhotonWP...INFO    Initialising...
+IsolationTool_PhotonWP...INFO    Reading input file IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root from /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/IsolationSelection/v1/MC15_Z_Jpsi_cutMap.root
+IsolationTool_PhotonWP...INFO    VersionInfo:2015_Jun_23_v1a
+top::OverlapRemovalCPT...INFO    top::OverlapRemovalCPTools initialize...
+top::OverlapRemovalCPT...INFO    Overlap removal procedure = recommended
+top::OverlapRemovalCPT...INFO    Setting up special OR tools for soft muons
+top::GhostTrackCPTools   INFO    top::GhostTrackCPTools initialize...
+top::GhostTrackCPTools   INFO    top::GhostTrackCPTools: no need to initialise anything since not using jets or tracks ghost-matched to jets
+top::TrackCPTools        INFO    top::TrackCPTools initialize...
+top::TrackCPTools        INFO    top::TrackCPTools: no need to initialise anything since not using tracks
+top::EventCleaningSele...INFO    Triggers for Selection 	ejets_2022	are TRIGDEC HLT_e26_lhtight_ivarloose_L1EM22VHI HLT_e60_lhmedium_L1EM22VHI HLT_e140_lhloose_L1EM22VHI 
+top::EventCleaningSele...INFO    Triggers for Selection 	mujets_2022	are TRIGDEC HLT_mu26_ivarmedium_L1MU14FCH HLT_mu50_L1MU14FCH 
+top::EventCleaningSele...INFO    Selection ejets_particle Does not request a trigger. No event veto will be applied
+top::EventCleaningSele...INFO    Selection mujets_particle Does not request a trigger. No event veto will be applied
+top::EventCleaningSele...INFO    All requested Tight triggers are:
+top::EventCleaningSele...INFO      HLT_e140_lhloose_L1EM22VHI
+top::EventCleaningSele...INFO      HLT_e26_lhtight_ivarloose_L1EM22VHI
+top::EventCleaningSele...INFO      HLT_e60_lhmedium_L1EM22VHI
+top::EventCleaningSele...INFO      HLT_mu26_ivarmedium_L1MU14FCH
+top::EventCleaningSele...INFO      HLT_mu50_L1MU14FCH
+top::EventCleaningSele...INFO    All requested Loose triggers are:
+top::EventCleaningSele...INFO      HLT_e140_lhloose_L1EM22VHI
+top::EventCleaningSele...INFO      HLT_e26_lhtight_ivarloose_L1EM22VHI
+top::EventCleaningSele...INFO      HLT_e60_lhmedium_L1EM22VHI
+top::EventCleaningSele...INFO      HLT_mu26_ivarmedium_L1MU14FCH
+top::EventCleaningSele...INFO      HLT_mu50_L1MU14FCH
+top::EventCleaningSele...INFO    Apply event veto on trigger decision = False
+top::ObjectCollectionM...INFO     top::ObjectCollectionMaker initialize
+top::EgammaObjectColle...INFO     top::EgammaObjectCollectionMaker initialize
+top::MuonObjectCollect...INFO     top::MuonObjectCollectionMaker initialize
+top::MuonObjectCollect...INFO     top::MuonObjectCollectionMaker completed initialize
+top::JetObjectCollecti...INFO     top::JetObjectCollectionMaker initialize
+top::MissingETObjectCo...INFO     top::MissingETObjectCollectionMaker initialize
+Package.TopAnalysis      INFO    Attempting to load ObjectSelection: top::ObjectLoaderStandardCuts
+Package.TopAnalysis      INFO    TopObjectSelection configuration
+
+Electrons
+  ContainerName: Electrons
+  Selection: ElectronLikelihood
+    * pT > 25000
+    * Currently disabled --- |cluster_eta| < 2.47 
+    * Veto 1.37 < |cluster_eta| < 1.52? true
+    * Standard Isolation
+        * Tight lepton isolation = AnalysisTop_Isol_Tight_VarRad
+        * Loose lepton isolation = AnalysisTop_Isol_Tight_VarRad
+    * LH Tool Operating Point: DFCommonElectronsLHTight 		 LH Tool Loose Operating Point: DFCommonElectronsLHTight 
+
+FwdElectrons
+  ContainerName: None
+
+Photons
+  ContainerName: None
+
+Muons
+  ContainerName: Muons
+  Selection: Muon
+    * pT > 25000
+    * Everything else from muon tool - fill this in?
+    * Standard Isolation
+        * Tight lepton isolation = AnalysisTop_Isol_Tight_VarRad
+        * Loose lepton isolation = AnalysisTop_Isol_None
+
+SoftMuons
+  ContainerName: None
+
+Jets
+  ContainerName: AntiKt4EMPFlowJets
+  Selection: Jet
+    * pT > 25000
+    * |eta| < 2.5
+
+LargeJets
+  ContainerName: None
+
+TrackJets
+  ContainerName: None
+
+GhostTracks
+  ContainerName: None
+
+MET
+  ContainerName: MET
+
+
+OverlapRemoval after object selection: OverlapRemovalASG
+  (1) remove electron that sharing track with muon
+  (2) remove single jet closest to an electron (within dR < 0.2)
+  (3) remove electron with dR < 0.4 of jet
+  (4) remove muon within dR < 0.4 of any jet
+
+
+
+Package.TopAnalysis      INFO    Attempting to load Tools from this class: top::TopEventSelectionToolsLoader
+Package.TopAnalysis      INFO       Success part 1 of 2
+Package.TopAnalysis      INFO       Success part 2 of 2
+Package.TopAnalysis      INFO    Attempting to load Tools from this class: top::TopEventReconstructionToolsLoader
+Package.TopAnalysis      INFO       Success part 1 of 2
+Package.TopAnalysis      INFO       Success part 2 of 2
+Package.TopAnalysis      INFO    Attempting to load Tools from this class: top::HowtoExtendAnalysisTopLoader
+Package.TopAnalysis      INFO       Success part 1 of 2
+Package.TopAnalysis      INFO       Success part 2 of 2
+Package.TopAnalysis      INFO    Telling you how I'm configured, before I do anything:
+top::ScaleFactorRetrieverINFO    Initialising top::ScaleFactorRetriever
+Package.TopAnalysis      INFO    
+ - ejets_2022:
+      1                       INITIAL
+      2                           GRL
+      3                      GOODCALO
+      4                        PRIVTX
+      5                    RECO_LEVEL
+      6          RUN_NUMBER >= 400000
+      7TRIGDEC  HLT_e140_lhloose_L1EM22VHI HLT_e26_lhtight_ivarloose_L1EM22VHI HLT_e60_lhmedium_L1EM22VHI
+      8               EL_N 25000 >= 1
+      9               EL_N 25000 == 1
+     10               MU_N 25000 == 0
+     11                     TRIGMATCH
+     12             JETCLEAN LooseBad
+     13              JET_N 25000 >= 1
+     14              JET_N 25000 >= 2
+     15              JET_N 25000 >= 3
+     16              JET_N 25000 >= 4
+     17                   MET > 30000
+     18                   MWT > 30000
+     19                  EXAMPLEPLOTS
+     20                     NOBADMUON
+     21JET_N_BTAG DL1dv01:FixedCutBEff_77 >= 1
+     22                          SAVE
+
+
+Package.TopAnalysis      INFO    
+ - mujets_2022:
+      1                       INITIAL
+      2                           GRL
+      3                      GOODCALO
+      4                        PRIVTX
+      5                    RECO_LEVEL
+      6          RUN_NUMBER >= 400000
+      7TRIGDEC  HLT_mu26_ivarmedium_L1MU14FCH HLT_mu50_L1MU14FCH
+      8               MU_N 25000 >= 1
+      9               MU_N 25000 == 1
+     10               EL_N 25000 == 0
+     11                     TRIGMATCH
+     12             JETCLEAN LooseBad
+     13              JET_N 25000 >= 1
+     14              JET_N 25000 >= 2
+     15              JET_N 25000 >= 3
+     16              JET_N 25000 >= 4
+     17               MET+MWT > 60000
+     18                  EXAMPLEPLOTS
+     19                     NOBADMUON
+     20JET_N_BTAG DL1dv01:FixedCutBEff_77 >= 1
+     21                          SAVE
+
+
+Package.TopAnalysis      INFO    
+ - ejets_particle:
+      1                        PRIVTX
+      2                PARTICLE_LEVEL
+      3               EL_N 27000 >= 1
+      4               EL_N 25000 == 1
+      5               MU_N 25000 == 0
+      6                     TRIGMATCH
+      7             JETCLEAN LooseBad
+      8              JET_N 25000 >= 1
+      9              JET_N 25000 >= 2
+     10              JET_N 25000 >= 3
+     11              JET_N 25000 >= 4
+     12                   MET > 30000
+     13                   MWT > 30000
+     14                  EXAMPLEPLOTS
+     15                     NOBADMUON
+     16                          SAVE
+
+
+Package.TopAnalysis      INFO    
+ - mujets_particle:
+      1                        PRIVTX
+      2                PARTICLE_LEVEL
+      3               MU_N 27000 >= 1
+      4               MU_N 25000 == 1
+      5               EL_N 25000 == 0
+      6                     TRIGMATCH
+      7             JETCLEAN LooseBad
+      8              JET_N 25000 >= 1
+      9              JET_N 25000 >= 2
+     10              JET_N 25000 >= 3
+     11              JET_N 25000 >= 4
+     12               MET+MWT > 60000
+     13                  EXAMPLEPLOTS
+     14                     NOBADMUON
+     15                          SAVE
+
+
+ParticleLevelLoader      INFO    Particle level reconstruction is disabled.
+
+Package.TopConfiguration INFO    TopConfig::fixConfiguration()
+Package.TopAnalysis      INFO    
+top::TopConfig has identified the following analysis release series : 25
+top::TopConfig will evaluate the following systematics (saved as TTrees in your ntuple) 
+A blank systematic means "Nominal" in xAOD. All Nominal calibrations go into the Nominal TTree. 
+
+ Electron systematic	 ::  
+ Muon systematic	 ::  
+ Jet systematic		 ::  
+
+
+
+top::ScaleFactorCalcul...INFO     top::ScaleFactorCalculator initialize
+top::ElectronScaleFact...INFO     top::ElectronScaleFactorCalculator initialize
+top::ElectronScaleFact...INFO    
+top::MuonScaleFactorCa...INFO     top::MuonScaleFactorCalculator initialize
+top::MuonScaleFactorCa...INFO    retrieved systematics from tool MuonTriggerScaleFactors_R21
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_TrigStatUncertainty
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_TrigSystUncertainty
+top::MuonScaleFactorCa...INFO    retrieved systematics from tool MuonTriggerScaleFactorsLoose_R21
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_TrigStatUncertainty
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_TrigSystUncertainty
+top::MuonScaleFactorCa...INFO    retrieved systematics from tool MuonEfficiencyScaleFactorsTool
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_RECO_STAT
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_RECO_STAT_LOWPT
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_RECO_SYS
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_RECO_SYS_LOWPT
+top::MuonScaleFactorCa...INFO    retrieved systematics from tool MuonEfficiencyScaleFactorsToolLoose
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_RECO_STAT
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_RECO_STAT_LOWPT
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_RECO_SYS
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_RECO_SYS_LOWPT
+top::MuonScaleFactorCa...INFO    retrieved systematics from tool MuonEfficiencyScaleFactorsToolTTVA
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_TTVA_STAT
+top::MuonScaleFactorCa...INFO    ---> MUON_EFF_TTVA_SYS
+top::JetScaleFactorCal...INFO    top::JetScaleFactorCalculator initialize
+top::BTagScaleFactorCa...INFO     top::BTagScaleFactorCalculator initialize
+top::ScaleFactorCalcul...WARNING Multiple NominalWeightNames match for this MC sample!
+"nominal"
+"Default"
+
+The one we will use is "nominal". Check whether this is really correct!
+top::ScaleFactorCalcul...INFO    Using the following MC weight as nominal: "nominal", index: 1
+top::PileupScaleFactor...INFO     top::PileupScaleFactorCalculator initialize
+Package.TopAnalysis      INFO    Attempting to load OutputFormat: top::EventSaverFlatNtuple
+Package.TopAnalysis      INFO    Starting event loop
+
+Package.TopAnalysis      INFO    Opening /lustre/collider/wangzhen/atlas/2a4b/dataset/mc23/DAOD_PHYS.34326943._000580.pool.root.1
+PMGTruthWeightTool       INFO    Attempting to retrieve MC channel number...
+Package.TopAnalysis      INFO    Processing event 0 / 20000 (current file: 0 / 20000)
+TrigDecisionTool         INFO    Updating config in slot 0 with SMK: 2251732456 and L1PSK: 3951035499 and HLTPSK: 1967831953 and BGSK: 2906127984 getForceConfigUpdate()=1 HLT Chains: 1815
+CP::TPileupReweighting... INFO    Initializing the subtool..
+CP::TPileupReweighting... INFO    Initializing the subtool..
+CP::TPileupReweighting... INFO    Initializing the subtool..
+TrigDecisionTool         INFO    decision not set on first (?) assert. deciding how to unpack
+TrigDecisionTool         INFO    SG contains xAOD decision, use DecisionUnpackerStandalone
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex :  container name is 410470_Eff
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/Light/410470_Eff (with comment: 'efficiencies from sample PowhegPythia8' and hadronisation setting 'Pythia8EvtGen')
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex : container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/Light/default_SF already cached! 
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex :  container name is 410470_Eff
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/C/410470_Eff (with comment: 'efficiencies from sample PowhegPythia8' and hadronisation setting 'Pythia8EvtGen')
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex : container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/C/default_SF already cached! 
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex :  container name is 410470_Eff
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/B/410470_Eff (with comment: 'efficiencies from sample PowhegPythia8' and hadronisation setting 'Pythia8EvtGen')
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex : container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/B/default_SF already cached! 
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex :  container name is 410470_Eff
+CalibrationDataInterface: retrieved container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/T/410470_Eff (with comment: 'efficiencies from sample PowhegPythia8' and hadronisation setting 'Pythia8EvtGen')
+CalibrationDataInterfaceROOT->retrieveCalibrationIndex : container DL1dv01/AntiKt4EMPFlowJets/FixedCutBEff_77/T/default_SF already cached! 
+Package.TopAnalysis      WARNING 
+***************************************************************************************
+You are running over MC campaigns which support actual mu rewighting, but you are not using it!
+You are strongly adviced to use it.
+Check https://twiki.cern.ch/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21#PRW_and_Lumicalc_files
+***************************************************************************************
+
+Package.TopAnalysis      INFO    Processing event 100 / 20000 (current file: 100 / 20000)
+Package.TopAnalysis      INFO    Processing event 200 / 20000 (current file: 200 / 20000)
+Package.TopAnalysis      INFO    Processing event 300 / 20000 (current file: 300 / 20000)
+Package.TopAnalysis      INFO    Processing event 400 / 20000 (current file: 400 / 20000)
+Package.TopAnalysis      INFO    Final yields:
+Package.TopAnalysis      INFO     - ejets_2022 cutflow:
+                                  cut         events     mc weights  mc*pu weights      lepton SF       b-tag SF
+      1                       INITIAL         500.00      407509.30      760111.12           0.00
+      2                           GRL         500.00      407509.30      760111.12           0.00
+      3                      GOODCALO         500.00      407509.30      760111.12           0.00
+      4                        PRIVTX         500.00      407509.30      760111.12           0.00
+      5                    RECO_LEVEL         500.00      407509.30      760111.13         496.25
+      6          RUN_NUMBER >= 400000         500.00      407509.30      760111.13         496.25
+      7TRIGDEC  HLT_e140_lhloose_L1EM22VHI HLT_e26_lhtight_ivarloose_L1EM22VHI HLT_e60_lhmedium_L1EM22VHI         100.00       81792.64      152327.14          98.67
+      8               EL_N 25000 >= 1          83.00       67771.05      123481.03          81.67
+      9               EL_N 25000 == 1          83.00       67771.05      123481.03          81.67
+     10               MU_N 25000 == 0          83.00       67771.05      123481.03          81.67
+     11                     TRIGMATCH          83.00       67771.05      123481.03          81.67
+     12             JETCLEAN LooseBad          83.00       67771.05      123481.03          81.67
+     13              JET_N 25000 >= 1          83.00       67771.05      123481.03          81.67
+     14              JET_N 25000 >= 2          81.00       66139.19      114604.26          79.69
+     15              JET_N 25000 >= 3          65.00       53087.07       87986.16          63.93
+     16              JET_N 25000 >= 4          38.00       31064.55       59069.52          37.38
+     17                   MET > 30000          31.00       25283.48       47777.58          30.49
+     18                   MWT > 30000          29.00       23652.31       46132.30          28.50
+     19                  EXAMPLEPLOTS          29.00       23652.31       46132.30          28.50
+     20                     NOBADMUON          29.00       23652.31       46132.30          28.50
+     21JET_N_BTAG DL1dv01:FixedCutBEff_77 >= 1          28.00       22837.07       46009.85          27.53
+     22                          SAVE          28.00       22837.07       46009.85          27.53
+
+
+Package.TopAnalysis      INFO     - mujets_2022 cutflow:
+                                  cut         events     mc weights  mc*pu weights      lepton SF       b-tag SF
+      1                       INITIAL         500.00      407509.30      760111.12           0.00
+      2                           GRL         500.00      407509.30      760111.12           0.00
+      3                      GOODCALO         500.00      407509.30      760111.12           0.00
+      4                        PRIVTX         500.00      407509.30      760111.12           0.00
+      5                    RECO_LEVEL         500.00      407509.30      760111.13         496.25
+      6          RUN_NUMBER >= 400000         500.00      407509.30      760111.13         496.25
+      7TRIGDEC  HLT_mu26_ivarmedium_L1MU14FCH HLT_mu50_L1MU14FCH         105.00       85646.43      162382.65         103.14
+      8               MU_N 25000 >= 1          86.00       70148.59      127908.30          84.17
+      9               MU_N 25000 == 1          86.00       70148.59      127908.30          84.17
+     10               EL_N 25000 == 0          86.00       70148.59      127908.30          84.17
+     11                     TRIGMATCH          85.00       69332.66      125876.51          83.19
+     12             JETCLEAN LooseBad          85.00       69332.66      125876.51          83.19
+     13              JET_N 25000 >= 1          85.00       69332.66      125876.51          83.19
+     14              JET_N 25000 >= 2          83.00       67700.80      123472.77          81.23
+     15              JET_N 25000 >= 3          72.00       58729.02      113601.11          70.49
+     16              JET_N 25000 >= 4          47.00       38337.67       78695.91          46.01
+     17               MET+MWT > 60000          39.00       31811.61       63212.39          38.23
+     18                  EXAMPLEPLOTS          39.00       31811.61       63212.39          38.23
+     19                     NOBADMUON          39.00       31811.61       63212.39          38.23
+     20JET_N_BTAG DL1dv01:FixedCutBEff_77 >= 1          37.00       30180.44       61271.47          36.27
+     21                          SAVE          37.00       30180.44       61271.47          36.27
+
+
+Package.TopAnalysis      INFO     - ejets_particle cutflow:
+                                  cut         events     mc weights  mc*pu weights      lepton SF       b-tag SF
+      1                        PRIVTX         500.00      407509.30      760111.12           0.00
+      2                PARTICLE_LEVEL           0.00           0.00           0.00           0.00
+      3               EL_N 27000 >= 1           0.00           0.00           0.00           0.00
+      4               EL_N 25000 == 1           0.00           0.00           0.00           0.00
+      5               MU_N 25000 == 0           0.00           0.00           0.00           0.00
+      6                     TRIGMATCH           0.00           0.00           0.00           0.00
+      7             JETCLEAN LooseBad           0.00           0.00           0.00           0.00
+      8              JET_N 25000 >= 1           0.00           0.00           0.00           0.00
+      9              JET_N 25000 >= 2           0.00           0.00           0.00           0.00
+     10              JET_N 25000 >= 3           0.00           0.00           0.00           0.00
+     11              JET_N 25000 >= 4           0.00           0.00           0.00           0.00
+     12                   MET > 30000           0.00           0.00           0.00           0.00
+     13                   MWT > 30000           0.00           0.00           0.00           0.00
+     14                  EXAMPLEPLOTS           0.00           0.00           0.00           0.00
+     15                     NOBADMUON           0.00           0.00           0.00           0.00
+     16                          SAVE           0.00           0.00           0.00           0.00
+
+
+Package.TopAnalysis      INFO     - mujets_particle cutflow:
+                                  cut         events     mc weights  mc*pu weights      lepton SF       b-tag SF
+      1                        PRIVTX         500.00      407509.30      760111.12           0.00
+      2                PARTICLE_LEVEL           0.00           0.00           0.00           0.00
+      3               MU_N 27000 >= 1           0.00           0.00           0.00           0.00
+      4               MU_N 25000 == 1           0.00           0.00           0.00           0.00
+      5               EL_N 25000 == 0           0.00           0.00           0.00           0.00
+      6                     TRIGMATCH           0.00           0.00           0.00           0.00
+      7             JETCLEAN LooseBad           0.00           0.00           0.00           0.00
+      8              JET_N 25000 >= 1           0.00           0.00           0.00           0.00
+      9              JET_N 25000 >= 2           0.00           0.00           0.00           0.00
+     10              JET_N 25000 >= 3           0.00           0.00           0.00           0.00
+     11              JET_N 25000 >= 4           0.00           0.00           0.00           0.00
+     12               MET+MWT > 60000           0.00           0.00           0.00           0.00
+     13                  EXAMPLEPLOTS           0.00           0.00           0.00           0.00
+     14                     NOBADMUON           0.00           0.00           0.00           0.00
+     15                          SAVE           0.00           0.00           0.00           0.00
+
+
+Package.TopAnalysis      INFO    Events saved to output file nominal reconstruction tree: 65
+Package.TopAnalysis      INFO    Events saved to output file truth tree : 0
+Package.TopAnalysis      INFO    Total sum-of-weights (for normalization) : 16201968.00
